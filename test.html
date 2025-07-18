@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .success {
+            color: #22c55e;
+            font-weight: bold;
+        }
+        .error {
+            color: #ef4444;
+            font-weight: bold;
+        }
+        .info {
+            color: #3b82f6;
+        }
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Portfolio Website Test</h1>
+    
+    <div class="test-section">
+        <h2>File Structure Test</h2>
+        <div id="file-test"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Functionality Test</h2>
+        <button onclick="testLinks()">Test Contact Links</button>
+        <button onclick="testPrint()">Test Print Function</button>
+        <button onclick="testResponsive()">Test Responsive Design</button>
+        <div id="functionality-test"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Deployment Instructions</h2>
+        <ol>
+            <li>Ensure all files are committed to git</li>
+            <li>Push to GitHub repository</li>
+            <li>Enable GitHub Pages in repository settings</li>
+            <li>Select main branch and root folder</li>
+            <li>Wait for deployment (usually 1-2 minutes)</li>
+        </ol>
+    </div>
+
+    <script>
+        // Test file structure
+        function testFiles() {
+            const requiredFiles = ['index.html', 'styles.css', 'script.js'];
+            const results = [];
+            
+            requiredFiles.forEach(file => {
+                fetch(file)
+                    .then(response => {
+                        if (response.ok) {
+                            results.push(`<span class="success">✅ ${file} found</span>`);
+                        } else {
+                            results.push(`<span class="error">❌ ${file} missing</span>`);
+                        }
+                        updateFileTest(results);
+                    })
+                    .catch(() => {
+                        results.push(`<span class="error">❌ ${file} missing</span>`);
+                        updateFileTest(results);
+                    });
+            });
+        }
+        
+        function updateFileTest(results) {
+            const testDiv = document.getElementById('file-test');
+            if (results.length === 3) {
+                testDiv.innerHTML = results.join('<br>');
+            }
+        }
+        
+        function testLinks() {
+            const testDiv = document.getElementById('functionality-test');
+            testDiv.innerHTML = '<span class="info">ℹ️ Contact links should open email, phone, and LinkedIn when clicked</span>';
+        }
+        
+        function testPrint() {
+            const testDiv = document.getElementById('functionality-test');
+            testDiv.innerHTML = '<span class="info">ℹ️ Print button should appear in top-right corner</span>';
+        }
+        
+        function testResponsive() {
+            const testDiv = document.getElementById('functionality-test');
+            testDiv.innerHTML = '<span class="info">ℹ️ Resize browser window to test responsive design</span>';
+        }
+        
+        // Run file test on load
+        window.onload = testFiles;
+    </script>
+</body>
+</html> 
