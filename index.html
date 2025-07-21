@@ -7,211 +7,555 @@
     <meta name="description" content="Gourav Jain - Strategic Engineering Leader, Microsoft Azure MVP, Full Stack & Cloud Architect, AI & DevOps Evangelist, Fintech & SaaS Expert">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <!-- Header Section -->
-        <header class="header">
-            <div class="profile-section">
-                <div class="profile-image">
-                    <img src="https://via.placeholder.com/150x150/2563eb/ffffff?text=GJ" alt="Gourav Jain" class="avatar">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>Gourav Jain</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-up">
+                <div class="hero-text">
+                    <h1 class="hero-title">Gourav Jain</h1>
+                    <p class="hero-subtitle">Strategic Engineering Leader | Microsoft Azure MVP</p>
+                    <p class="hero-description">Full Stack & Cloud Architect | AI & DevOps Evangelist | Fintech & SaaS Expert</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                        <a href="#projects" class="btn btn-secondary">View Projects</a>
+                    </div>
                 </div>
-                <div class="profile-info">
-                    <h1 class="name">Gourav Jain</h1>
-                    <p class="title">Strategic Engineering Leader | Microsoft Azure MVP | Full Stack & Cloud Architect | AI & DevOps Evangelist | Fintech & SaaS Expert</p>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+91-9953573400</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>gourav8jain@gmail.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-linkedin"></i>
-                            <span>linkedin.com/in/gourav8jain</span>
+                <div class="hero-image">
+                    <div class="profile-card">
+                        <img src="image.png" alt="Gourav Jain" class="profile-img">
+                        <div class="profile-badge">
+                            <i class="fas fa-award"></i>
+                            <span>Azure MVP</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </header>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <div class="two-column-layout">
-                <!-- Left Column -->
-                <div class="left-column">
-                    <!-- Domains & Industry Exposure -->
-                    <section class="section">
-                        <div class="section-header">
-                            <i class="fas fa-cogs"></i>
-                            <h2>Domains & Industry Exposure</h2>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>About Me</h2>
+                <p>Strategic engineering leader with 15+ years of experience in full-stack development and cloud architecture</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <h3>Professional Summary</h3>
+                    <p>I am a Microsoft Azure MVP recognized for technical excellence and community contributions. Expert in building scalable systems and leading cross-functional teams across fintech, logistics, and healthcare domains. Passionate about AI/ML integration and DevOps automation to drive innovation.</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Years Experience</div>
                         </div>
-                        <div class="domains-list">
-                            <span class="domain-item">Fintech</span>
-                            <span class="domain-separator">|</span>
-                            <span class="domain-item">Logistics & Supply Chain</span>
-                            <span class="domain-separator">|</span>
-                            <span class="domain-item">Healthcare</span>
-                            <span class="domain-separator">|</span>
-                            <span class="domain-item">E-commerce & Payments</span>
-                            <span class="domain-separator">|</span>
-                            <span class="domain-item">Manufacturing</span>
-                            <span class="domain-separator">|</span>
-                            <span class="domain-item">Consulting</span>
-                            <span class="domain-separator">|</span>
-                            <span class="domain-item">SaaS</span>
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Projects Delivered</div>
                         </div>
-                    </section>
-
-                    <!-- Core Competencies -->
-                    <section class="section">
-                        <div class="section-header">
-                            <i class="fas fa-list"></i>
-                            <h2>Core Competencies</h2>
+                        <div class="stat-item">
+                            <div class="stat-number">20+</div>
+                            <div class="stat-label">Team Members Led</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">7</div>
+                            <div class="stat-label">Industries</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image" data-aos="fade-left">
+                    <div class="about-card">
+                        <div class="card-header">
+                            <h4>Core Competencies</h4>
                         </div>
                         <div class="competencies-grid">
-                            <div class="competency-item">Engineering Leadership & Strategy</div>
-                            <div class="competency-item">Project & Delivery Management</div>
-                            <div class="competency-item">Product & Platform Development</div>
-                            <div class="competency-item">Cloud-Native CI/CD & DevOps Implementation | Automation Excellence</div>
-                            <div class="competency-item">People & Process Excellence</div>
-                            <div class="competency-item">Innovation & AI Enablement</div>
-                            <div class="competency-item">Quality & Governance</div>
-                            <div class="competency-item">Scalable System & API Architecture</div>
-                            <div class="competency-item">Agile & Scrum-Based Delivery Management</div>
-                            <div class="competency-item">Cross-Functional Stakeholder Collaboration</div>
-                            <div class="competency-item">AI-Augmented Development (Copilot, ChatGPT)</div>
-                            <div class="competency-item">Technical Thought Leadership & Knowledge Sharing</div>
-                        </div>
-                    </section>
-
-                    <!-- Technical Skills -->
-                    <section class="section">
-                        <div class="section-header">
-                            <i class="fas fa-cogs"></i>
-                            <h2>Technical Skills</h2>
-                        </div>
-                        
-                        <div class="skills-category">
-                            <h3>Programming Languages & Frameworks</h3>
-                            <ul class="skills-list">
-                                <li>.NET / .NET Core, C#, JavaScript, TypeScript, Python, Golang, Java</li>
-                                <li>NodeJS, NestJS, ReactJS, Redux, AngularJS</li>
-                                <li>Unity 3D, Blender (for 3D applications)</li>
-                            </ul>
-                        </div>
-
-                        <div class="skills-category">
-                            <h3>Databases & Storage</h3>
-                            <ul class="skills-list">
-                                <li>SQL Server, PostgreSQL, MySQL, MongoDB, Cosmos DB</li>
-                                <li>Entity Framework / EF Core, TypeORM</li>
-                            </ul>
-                        </div>
-
-                        <div class="skills-category">
-                            <h3>Cloud Platforms</h3>
-                            <ul class="skills-list">
-                                <li>Microsoft Azure, AWS</li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-
-                <!-- Right Column -->
-                <div class="right-column">
-                    <!-- Profile Summary -->
-                    <section class="section">
-                        <div class="section-header">
-                            <i class="fas fa-user"></i>
-                            <h2>Profile Summary</h2>
-                        </div>
-                        <div class="profile-summary">
-                            <ul class="summary-list">
-                                <li>Strategic engineering leader with 15+ years of experience in full-stack development and cloud architecture</li>
-                                <li>Microsoft Azure MVP recognized for technical excellence and community contributions</li>
-                                <li>Expert in building scalable systems and leading cross-functional teams across fintech, logistics, and healthcare domains</li>
-                                <li>Passionate about AI/ML integration and DevOps automation to drive innovation</li>
-                                <li>Proven track record of delivering complex projects and mentoring engineering teams</li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    <!-- Career Timeline -->
-                    <section class="section">
-                        <div class="section-header">
-                            <i class="fas fa-chart-bar"></i>
-                            <h2>Career Timeline (recent 4 organizations)</h2>
-                        </div>
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <div class="company-logo">
-                                    <div class="logo-placeholder">S</div>
-                                </div>
-                                <div class="timeline-content">
-                                    <h3>Stryker</h3>
-                                    <p class="timeline-period">2020-2021</p>
-                                </div>
+                            <div class="competency-item" data-aos="zoom-in" data-aos-delay="100">
+                                <i class="fas fa-users"></i>
+                                <span>Engineering Leadership</span>
                             </div>
-                            <div class="timeline-connector"></div>
-                            <div class="timeline-item">
-                                <div class="company-logo">
-                                    <div class="logo-placeholder">B</div>
-                                </div>
-                                <div class="timeline-content">
-                                    <h3>BOLD</h3>
-                                    <p class="timeline-period">2021-2023</p>
-                                </div>
+                            <div class="competency-item" data-aos="zoom-in" data-aos-delay="200">
+                                <i class="fas fa-cloud"></i>
+                                <span>Cloud Architecture</span>
                             </div>
-                            <div class="timeline-connector"></div>
-                            <div class="timeline-item">
-                                <div class="company-logo">
-                                    <div class="logo-placeholder">N</div>
-                                </div>
-                                <div class="timeline-content">
-                                    <h3>novo</h3>
-                                    <p class="timeline-period">2023-2024</p>
-                                </div>
+                            <div class="competency-item" data-aos="zoom-in" data-aos-delay="300">
+                                <i class="fas fa-robot"></i>
+                                <span>AI/ML Integration</span>
                             </div>
-                            <div class="timeline-connector"></div>
-                            <div class="timeline-item">
-                                <div class="company-logo">
-                                    <div class="logo-placeholder">D</div>
-                                </div>
-                                <div class="timeline-content">
-                                    <h3>DELHIVERY</h3>
-                                    <p class="timeline-period">Since 2024</p>
-                                </div>
+                            <div class="competency-item" data-aos="zoom-in" data-aos-delay="400">
+                                <i class="fas fa-cogs"></i>
+                                <span>DevOps Automation</span>
+                            </div>
+                            <div class="competency-item" data-aos="zoom-in" data-aos-delay="500">
+                                <i class="fas fa-code"></i>
+                                <span>Full Stack Development</span>
+                            </div>
+                            <div class="competency-item" data-aos="zoom-in" data-aos-delay="600">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Strategic Planning</span>
                             </div>
                         </div>
-                    </section>
-
-                    <!-- Work Experience -->
-                    <section class="section">
-                        <div class="section-header">
-                            <i class="fas fa-briefcase"></i>
-                            <h2>Work Experience</h2>
-                        </div>
-                        <div class="experience-item">
-                            <h3>Senior Engineering Manager (Full Stack) | Delhivery - Transportation & Logistics | Since Nov'24</h3>
-                            <ul class="experience-list">
-                                <li>Leading a team of 15+ engineers in developing scalable logistics solutions</li>
-                                <li>Architecting cloud-native applications using Azure services and microservices patterns</li>
-                                <li>Implementing CI/CD pipelines and DevOps practices to improve deployment efficiency</li>
-                                <li>Collaborating with product teams to deliver high-impact features</li>
-                                <li>Mentoring junior developers and conducting technical interviews</li>
-                                <li>Driving innovation through AI/ML integration in logistics operations</li>
-                            </ul>
-                        </div>
-                    </section>
+                    </div>
                 </div>
             </div>
-        </main>
-    </div>
+        </div>
+    </section>
 
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Professional Experience</h2>
+                <p>My journey through leading organizations and delivering impactful solutions</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Senior Engineering Manager (Full Stack)</h3>
+                            <span class="company">Delhivery</span>
+                            <span class="period">Nov 2024 - Present</span>
+                        </div>
+                        <p class="company-desc">Transportation & Logistics</p>
+                        <ul class="achievements">
+                            <li>Leading a team of 15+ engineers in developing scalable logistics solutions</li>
+                            <li>Architecting cloud-native applications using Azure services and microservices patterns</li>
+                            <li>Implementing CI/CD pipelines and DevOps practices to improve deployment efficiency</li>
+                            <li>Driving innovation through AI/ML integration in logistics operations</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Azure</span>
+                            <span class="tech-tag">.NET Core</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Microservices</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Engineering Manager</h3>
+                            <span class="company">novo</span>
+                            <span class="period">2023 - 2024</span>
+                        </div>
+                        <p class="company-desc">Fintech & Digital Banking</p>
+                        <ul class="achievements">
+                            <li>Led development of digital banking platforms and payment solutions</li>
+                            <li>Managed cross-functional teams in agile environment</li>
+                            <li>Implemented security best practices for financial applications</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Security</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Senior Software Engineer</h3>
+                            <span class="company">BOLD</span>
+                            <span class="period">2021 - 2023</span>
+                        </div>
+                        <p class="company-desc">E-commerce & SaaS</p>
+                        <ul class="achievements">
+                            <li>Developed scalable e-commerce platforms and SaaS solutions</li>
+                            <li>Implemented cloud-native architectures and CI/CD pipelines</li>
+                            <li>Mentored junior developers and conducted technical interviews</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Software Engineer</h3>
+                            <span class="company">Stryker</span>
+                            <span class="period">2020 - 2021</span>
+                        </div>
+                        <p class="company-desc">Healthcare Technology</p>
+                        <ul class="achievements">
+                            <li>Developed healthcare software solutions and medical device interfaces</li>
+                            <li>Ensured compliance with healthcare regulations and standards</li>
+                            <li>Collaborated with medical professionals on product requirements</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">.NET</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">Healthcare</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Technical Skills</h2>
+                <p>Comprehensive expertise across modern technologies and platforms</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category" data-aos="fade-up">
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Programming Languages & Frameworks</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">.NET / .NET Core</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">C#</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript / TypeScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">React / Angular</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Databases & Storage</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">SQL Server</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">PostgreSQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MongoDB</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Cosmos DB</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Entity Framework</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-header">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Cloud Platforms & DevOps</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Microsoft Azure</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">AWS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Docker & Kubernetes</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">CI/CD Pipelines</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Terraform</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Featured Projects</h2>
+                <p>Showcasing innovative solutions and technical achievements</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=250&fit=crop&auto=format&q=80" alt="Logistics Platform">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Logistics Management Platform</h3>
+                        <p>Scalable microservices-based logistics platform built with Azure services, handling 1M+ daily transactions.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Azure</span>
+                            <span class="tech-tag">.NET Core</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Microservices</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop&auto=format&q=80" alt="Fintech Solution">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Digital Banking Platform</h3>
+                        <p>Secure fintech solution with real-time payment processing and AI-powered fraud detection.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">AI/ML</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop&auto=format&q=80" alt="Healthcare System">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Healthcare Management System</h3>
+                        <p>HIPAA-compliant healthcare platform with patient management and medical device integration.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">.NET</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">Healthcare</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Get In Touch</h2>
+                <p>Let's discuss opportunities and collaborations</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>gourav8jain@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+91-9953573400</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <p>linkedin.com/in/gourav8jain</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Gurgaon, Haryana, India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Gourav Jain</h3>
+                    <p>Strategic Engineering Leader & Microsoft Azure MVP</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/gourav8jain" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:gourav8jain@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:+919953573400"><i class="fas fa-phone"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Gourav Jain. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html> 
