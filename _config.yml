@@ -1,0 +1,17 @@
+# Jekyll configuration for GitHub Pages
+title: Gourav Jain - Portfolio
+description: Strategic Engineering Leader | Microsoft Azure MVP
+url: "https://gourav8jain.github.io"
+baseurl: "/portfolio"
+
+# Build settings
+plugins:
+  - jekyll-feed
+
+# Exclude from processing
+exclude:
+  - .github
+  - README.md
+  - DEPLOYMENT.md
+  - deploy.sh
+  - test.html 
