@@ -240,7 +240,17 @@ function initContactForm() {
             from_email: data.email,
             subject: data.subject,
             message: data.message,
-            reply_to: data.email
+            reply_to: data.email,
+            date: new Date().toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            }),
+            time: new Date().toLocaleTimeString('en-US', { 
+                hour: '2-digit', 
+                minute: '2-digit',
+                hour12: true 
+            })
         };
         
         // Send email using EmailJS service

@@ -1,0 +1,26 @@
+Subject: New Contact Form Message from {{from_name}}
+
+Hello Gourav,
+
+You have received a new message from your portfolio website:
+
+CONTACT INFORMATION:
+===================
+Name: {{from_name}}
+Email: {{from_email}}
+Subject: {{subject}}
+Date: {{date}}
+Time: {{time}}
+
+MESSAGE:
+========
+{{message}}
+
+QUICK ACTIONS:
+==============
+Reply to: {{from_email}}
+View Portfolio: https://gourav8jain.github.io/portfolio
+
+---
+This message was sent from your portfolio contact form.
+Sent on {{date}} at {{time}} 
