@@ -197,7 +197,7 @@ function initContactForm() {
     script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
     script.onload = function() {
         // Initialize EmailJS with your public key
-        emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your actual EmailJS public key
+        emailjs.init('ecDANBzlRs3xWqwes');
     };
     document.head.appendChild(script);
     
@@ -244,7 +244,7 @@ function initContactForm() {
         };
         
         // Send email using EmailJS service
-        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+        emailjs.send('service_0vxugex', 'template_lycsxuu', templateParams)
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
                 showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
