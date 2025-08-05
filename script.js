@@ -192,27 +192,72 @@ function initBackToTop() {
 function initContactForm() {
     if (!contactForm) return;
     
+    // Load EmailJS SDK
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+    script.onload = function() {
+        // Initialize EmailJS with your public key
+        emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your actual EmailJS public key
+    };
+    document.head.appendChild(script);
+    
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
         // Get form data
         const formData = new FormData(this);
-        const data = Object.fromEntries(formData);
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            subject: formData.get('subject'),
+            message: formData.get('message')
+        };
         
-        // Simulate form submission
+        // Validate form data
+        if (!data.name || !data.email || !data.subject || !data.message) {
+            showNotification('Please fill in all fields', 'error');
+            return;
+        }
+        
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(data.email)) {
+            showNotification('Please enter a valid email address', 'error');
+            return;
+        }
+        
+        // Get submit button and show loading state
         const submitBtn = this.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
+        const originalText = submitBtn.innerHTML;
         
-        submitBtn.textContent = 'Sending...';
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         submitBtn.disabled = true;
         
-        // Simulate API call
-        setTimeout(() => {
-            showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
-            this.reset();
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        }, 1500);
+        // Send email using EmailJS
+        const templateParams = {
+            to_email: 'gourav8jain@gmail.com',
+            from_name: data.name,
+            from_email: data.email,
+            subject: data.subject,
+            message: data.message,
+            reply_to: data.email
+        };
+        
+        // Send email using EmailJS service
+        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+                contactForm.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            })
+            .catch(function(error) {
+                console.log('FAILED...', error);
+                showNotification('Failed to send message. Please try again or contact me directly.', 'error');
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            });
     });
 }
 
@@ -413,21 +458,46 @@ function initCursorEffects() {
 // Notification system
 function showNotification(message, type = 'info') {
     const notification = document.createElement('div');
+    
+    // Set background color based on type
+    let bgColor = '#3b82f6'; // Default blue
+    let icon = 'fas fa-info-circle';
+    
+    if (type === 'success') {
+        bgColor = '#10b981'; // Green
+        icon = 'fas fa-check-circle';
+    } else if (type === 'error') {
+        bgColor = '#ef4444'; // Red
+        icon = 'fas fa-exclamation-circle';
+    } else if (type === 'warning') {
+        bgColor = '#f59e0b'; // Orange
+        icon = 'fas fa-exclamation-triangle';
+    }
+    
     notification.style.cssText = `
         position: fixed;
         top: 20px;
         right: 20px;
         padding: 1rem 1.5rem;
-        background: ${type === 'success' ? '#10b981' : '#3b82f6'};
+        background: ${bgColor};
         color: white;
         border-radius: var(--border-radius);
         box-shadow: var(--shadow-lg);
         z-index: 10000;
         transform: translateX(100%);
         transition: transform 0.3s ease;
-        max-width: 300px;
+        max-width: 350px;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-weight: 500;
     `;
-    notification.textContent = message;
+    
+    notification.innerHTML = `
+        <i class="${icon}" style="font-size: 1.1rem;"></i>
+        <span>${message}</span>
+    `;
+    
     document.body.appendChild(notification);
     
     // Animate in
@@ -435,13 +505,15 @@ function showNotification(message, type = 'info') {
         notification.style.transform = 'translateX(0)';
     }, 100);
     
-    // Remove after 3 seconds
+    // Remove after 5 seconds
     setTimeout(() => {
         notification.style.transform = 'translateX(100%)';
         setTimeout(() => {
-            document.body.removeChild(notification);
+            if (document.body.contains(notification)) {
+                document.body.removeChild(notification);
+            }
         }, 300);
-    }, 3000);
+    }, 5000);
 }
 
 // Lazy loading for images
