@@ -30,20 +30,46 @@ function throttle(func, limit) {
     }
 }
 
+// Cache DOM elements for better performance
+let navbar, hamburger, navMenu, navLinks, backToTop, contactForm;
+let sections = [];
+let timelineItems = [];
+let skillBars = [];
+let projectCards = [];
+
+// Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
+    // Cache frequently used DOM elements
+    cacheDOMElements();
+    
     // Initialize all functionality with performance optimizations
     initPortfolio();
 });
 
+function cacheDOMElements() {
+    navbar = document.querySelector('.navbar');
+    hamburger = document.querySelector('.hamburger');
+    navMenu = document.querySelector('.nav-menu');
+    navLinks = document.querySelectorAll('.nav-link');
+    backToTop = document.getElementById('backToTop');
+    contactForm = document.getElementById('contactForm');
+    sections = document.querySelectorAll('section[id]');
+    timelineItems = document.querySelectorAll('.timeline-item');
+    skillBars = document.querySelectorAll('.skill-progress');
+    projectCards = document.querySelectorAll('.project-card');
+}
+
 function initPortfolio() {
     // Initialize AOS (Animate On Scroll) with performance settings
-    AOS.init({
-        duration: 600, // Reduced from 800 for faster animations
-        easing: 'ease-out',
-        once: true,
-        offset: 50, // Reduced from 100 for earlier triggering
-        disable: 'mobile' // Disable on mobile for better performance
-    });
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 600,
+            easing: 'ease-out',
+            once: true,
+            offset: 50,
+            disable: 'mobile'
+        });
+    }
 
     // Initialize all components with performance optimizations
     initNavigation();
@@ -53,7 +79,6 @@ function initPortfolio() {
     initSkillBars();
     initProjectCards();
     initTimelineAnimation();
-    initTypingEffect();
     initParallaxEffects();
     initMobileMenu();
     initScrollProgress();
@@ -67,10 +92,7 @@ function initPortfolio() {
 
 // Navigation functionality with performance optimizations
 function initNavigation() {
-    const navbar = document.querySelector('.navbar');
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
+    if (!navbar || !hamburger || !navMenu) return;
 
     // Optimized navbar scroll effect with throttling
     const handleScroll = throttle(() => {
@@ -81,7 +103,7 @@ function initNavigation() {
             navbar.style.background = 'rgba(255, 255, 255, 0.95)';
             navbar.style.boxShadow = 'none';
         }
-    }, 16); // 60fps throttling
+    }, 16);
 
     window.addEventListener('scroll', handleScroll, { passive: true });
 
@@ -103,9 +125,7 @@ function initNavigation() {
 
     // Optimized active link highlighting with throttling
     const updateActiveLink = throttle(() => {
-        const sections = document.querySelectorAll('section[id]');
         let current = '';
-        
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
@@ -148,7 +168,7 @@ function initSmoothScrolling() {
 
 // Back to top functionality
 function initBackToTop() {
-    const backToTop = document.getElementById('backToTop');
+    if (!backToTop) return;
     
     const handleScroll = throttle(() => {
         if (window.scrollY > 300) {
@@ -170,37 +190,35 @@ function initBackToTop() {
 
 // Contact form functionality
 function initContactForm() {
-    const contactForm = document.getElementById('contactForm');
+    if (!contactForm) return;
     
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-            
-            // Simulate form submission
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-            
-            // Simulate API call
-            setTimeout(() => {
-                showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
-                this.reset();
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            }, 1500);
-        });
-    }
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData);
+        
+        // Simulate form submission
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        
+        // Simulate API call
+        setTimeout(() => {
+            showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+            this.reset();
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }, 1500);
+    });
 }
 
 // Skill bars animation with Intersection Observer
 function initSkillBars() {
-    const skillBars = document.querySelectorAll('.skill-progress');
+    if (skillBars.length === 0) return;
     
     const animateSkillBars = () => {
         skillBars.forEach(bar => {
@@ -231,7 +249,7 @@ function initSkillBars() {
 
 // Project cards interaction
 function initProjectCards() {
-    const projectCards = document.querySelectorAll('.project-card');
+    if (projectCards.length === 0) return;
     
     projectCards.forEach(card => {
         card.addEventListener('mouseenter', () => {
@@ -246,7 +264,7 @@ function initProjectCards() {
 
 // Timeline animation with staggered reveals
 function initTimelineAnimation() {
-    const timelineItems = document.querySelectorAll('.timeline-item');
+    if (timelineItems.length === 0) return;
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
@@ -270,7 +288,7 @@ function initTimelineAnimation() {
                         }
                     }, 200);
                     
-                }, index * 300); // Increased delay for smoother effect
+                }, index * 300);
                 observer.unobserve(entry.target);
             }
         });
@@ -294,38 +312,6 @@ function initTimelineAnimation() {
         
         observer.observe(item);
     });
-    
-    // Add CSS animation for marker pulse
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes pulse {
-            0% { transform: translateX(-50%) scale(1); }
-            50% { transform: translateX(-50%) scale(1.3); }
-            100% { transform: translateX(-50%) scale(1); }
-        }
-    `;
-    document.head.appendChild(style);
-}
-
-// Typing effect for hero title
-function initTypingEffect() {
-    const heroTitle = document.querySelector('.hero-title');
-    if (!heroTitle) return;
-    
-    const text = heroTitle.textContent;
-    heroTitle.textContent = '';
-    
-    let i = 0;
-    const typeWriter = () => {
-        if (i < text.length) {
-            heroTitle.textContent += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 100);
-        }
-    };
-    
-    // Start typing effect after a short delay
-    setTimeout(typeWriter, 500);
 }
 
 // Parallax effects with performance optimization
@@ -345,8 +331,7 @@ function initParallaxEffects() {
 
 // Mobile menu functionality
 function initMobileMenu() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
+    if (!hamburger || !navMenu) return;
     
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
