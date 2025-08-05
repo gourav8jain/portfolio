@@ -251,21 +251,60 @@ function initTimelineAnimation() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
+                // Add a staggered delay for each item
                 setTimeout(() => {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }, index * 200);
+                    entry.target.classList.add('animate');
+                    
+                    // Add subtle animation to timeline markers
+                    const marker = entry.target.querySelector('.timeline-marker');
+                    if (marker) {
+                        marker.style.animation = 'pulse 0.6s ease-out';
+                    }
+                    
+                    // Animate the content with a slight delay
+                    setTimeout(() => {
+                        const content = entry.target.querySelector('.timeline-content');
+                        if (content) {
+                            content.style.opacity = '1';
+                            content.style.transform = 'translateY(0)';
+                        }
+                    }, 200);
+                    
+                }, index * 300); // Increased delay for smoother effect
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.3 });
+    }, { 
+        threshold: 0.2,
+        rootMargin: '0px 0px -50px 0px'
+    });
 
     timelineItems.forEach(item => {
         item.style.opacity = '0';
-        item.style.transform = 'translateY(30px)';
-        item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        item.style.transform = 'translateY(40px)';
+        item.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+        
+        // Initialize content opacity
+        const content = item.querySelector('.timeline-content');
+        if (content) {
+            content.style.opacity = '0';
+            content.style.transform = 'translateY(20px)';
+            content.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+        }
+        
         observer.observe(item);
     });
+    
+    // Add CSS animation for marker pulse
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes pulse {
+            0% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.3); }
+            100% { transform: translateX(-50%) scale(1); }
+        }
+    `;
+    document.head.appendChild(style);
 }
 
 // Typing effect for hero title
