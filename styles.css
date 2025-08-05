@@ -587,7 +587,7 @@ body {
 .timeline::before {
     content: '';
     position: absolute;
-    left: 50%;
+    left: 50px;
     top: 0;
     bottom: 0;
     width: 2px;
@@ -619,7 +619,7 @@ body {
 
 .timeline-marker {
     position: absolute;
-    left: 50%;
+    left: 50px;
     top: 0;
     transform: translateX(-50%);
     z-index: 3;
@@ -683,7 +683,7 @@ body {
 .marker-line {
     position: absolute;
     top: 20px;
-    left: 50%;
+    left: 50px;
     transform: translateX(-50%);
     width: 2px;
     height: 50px;
@@ -709,11 +709,6 @@ body {
     -webkit-backdrop-filter: blur(10px);
 }
 
-.timeline-item:nth-child(even) .timeline-content {
-    margin-left: 0;
-    margin-right: 80px;
-}
-
 .timeline-content::before {
     content: '';
     position: absolute;
@@ -725,14 +720,6 @@ body {
     border-bottom: 8px solid transparent;
     border-right: 8px solid white;
     filter: drop-shadow(-2px 0 2px rgba(0, 0, 0, 0.1));
-}
-
-.timeline-item:nth-child(even) .timeline-content::before {
-    left: auto;
-    right: -8px;
-    border-right: none;
-    border-left: 8px solid white;
-    filter: drop-shadow(2px 0 2px rgba(0, 0, 0, 0.1));
 }
 
 .timeline-content:hover {
@@ -1455,11 +1442,6 @@ body {
         padding: 1.5rem;
     }
 
-    .timeline-item:nth-child(even) .timeline-content {
-        margin-left: 70px;
-        margin-right: 0;
-    }
-
     .timeline-marker {
         left: 30px;
         width: 18px;
@@ -1488,18 +1470,11 @@ body {
         width: 2px;
         height: 40px;
         top: 18px;
+        left: 30px;
     }
 
     .timeline-content::before {
         left: -8px;
-        border-right: 8px solid white;
-        border-left: none;
-        filter: drop-shadow(-1px 0 1px rgba(0, 0, 0, 0.1));
-    }
-
-    .timeline-item:nth-child(even) .timeline-content::before {
-        left: -8px;
-        right: auto;
         border-right: 8px solid white;
         border-left: none;
         filter: drop-shadow(-1px 0 1px rgba(0, 0, 0, 0.1));
@@ -1792,12 +1767,8 @@ body {
     animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-.timeline-item:nth-child(odd) .timeline-content.animate {
+.timeline-content.animate {
     animation: slideInRight 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-.timeline-item:nth-child(even) .timeline-content.animate {
-    animation: slideInLeft 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .timeline-marker.animate {
