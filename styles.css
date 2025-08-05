@@ -587,7 +587,7 @@ body {
 .timeline::before {
     content: '';
     position: absolute;
-    left: 50px;
+    left: 30px;
     top: 0;
     bottom: 0;
     width: 2px;
@@ -619,7 +619,7 @@ body {
 
 .timeline-marker {
     position: absolute;
-    left: 50px;
+    left: 30px;
     top: 0;
     transform: translateX(-50%);
     z-index: 3;
@@ -683,7 +683,7 @@ body {
 .marker-line {
     position: absolute;
     top: 20px;
-    left: 50px;
+    left: 30px;
     transform: translateX(-50%);
     width: 2px;
     height: 50px;
@@ -702,7 +702,7 @@ body {
     border-radius: 16px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(37, 99, 235, 0.1);
-    margin-left: 80px;
+    margin-left: 60px;
     margin-right: 0;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
@@ -1429,7 +1429,7 @@ body {
 
     /* Timeline Mobile Optimizations */
     .timeline::before {
-        left: 30px;
+        left: 20px;
         width: 2px;
         box-shadow: 
             0 0 6px rgba(37, 99, 235, 0.2),
@@ -1437,13 +1437,13 @@ body {
     }
 
     .timeline-content {
-        margin-left: 70px;
+        margin-left: 50px;
         margin-right: 0;
         padding: 1.5rem;
     }
 
     .timeline-marker {
-        left: 30px;
+        left: 20px;
         width: 18px;
         height: 18px;
         border-width: 2px;
@@ -1470,7 +1470,7 @@ body {
         width: 2px;
         height: 40px;
         top: 18px;
-        left: 30px;
+        left: 20px;
     }
 
     .timeline-content::before {
@@ -1611,8 +1611,25 @@ body {
         max-width: 200px;
     }
     
+    /* Timeline Mobile Small Screen */
+    .timeline::before {
+        left: 15px;
+    }
+    
     .timeline-content {
-        padding: 1.5rem;
+        margin-left: 40px;
+        padding: 1.25rem;
+    }
+    
+    .timeline-marker {
+        left: 15px;
+        width: 16px;
+        height: 16px;
+    }
+    
+    .marker-line {
+        left: 15px;
+        height: 35px;
     }
     
     .project-card {
