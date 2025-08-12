@@ -60,16 +60,15 @@ function cacheDOMElements() {
 }
 
 function initPortfolio() {
-    // Initialize AOS (Animate On Scroll) with performance settings
-    if (typeof AOS !== 'undefined') {
-        AOS.init({
-            duration: 600,
-            easing: 'ease-out',
-            once: true,
-            offset: 50,
-            disable: 'mobile'
-        });
-    }
+    // Disable AOS for better performance
+    // if (typeof AOS !== 'undefined') {
+    //     AOS.init({
+    //         duration: 600,
+    //         easing: 'ease-out',
+    //         once: true,
+    //         offset: 50
+    //     });
+    // }
 
     // Initialize all components with performance optimizations
     initNavigation();
@@ -79,15 +78,36 @@ function initPortfolio() {
     initSkillBars();
     initProjectCards();
     initTimelineAnimation();
-    initParallaxEffects();
+    // initParallaxEffects(); // Disabled for performance
     initMobileMenu();
     initScrollProgress();
-    initCursorEffects();
+    // initCursorEffects(); // Disabled for performance
+    
+    // Ensure experience section is visible
+    ensureExperienceVisibility();
     
     // Performance optimizations
     initLazyLoading();
     initIntersectionObserver();
     preloadCriticalResources();
+    
+    // Add resize handler for responsive timeline
+    window.addEventListener('resize', debounce(() => {
+        const isMobile = window.innerWidth <= 768;
+        if (isMobile && timelineItems.length > 0) {
+            // Ensure timeline items are visible on mobile
+            timelineItems.forEach(item => {
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+                
+                const content = item.querySelector('.timeline-content');
+                if (content) {
+                    content.style.opacity = '1';
+                    content.style.transform = 'translateY(0)';
+                }
+            });
+        }
+    }, 250));
 }
 
 // Navigation functionality with performance optimizations
@@ -145,7 +165,7 @@ function initNavigation() {
     window.addEventListener('scroll', updateActiveLink, { passive: true });
 }
 
-// Smooth scrolling for navigation links
+// Smooth scrolling for navigation links - Simplified for performance
 function initSmoothScrolling() {
     const links = document.querySelectorAll('a[href^="#"]');
     
@@ -159,7 +179,7 @@ function initSmoothScrolling() {
                 const offsetTop = targetSection.offsetTop - 80;
                 window.scrollTo({
                     top: offsetTop,
-                    behavior: 'smooth'
+                    behavior: 'auto' // Changed from 'smooth' for performance
                 });
             }
         });
@@ -183,7 +203,7 @@ function initBackToTop() {
     backToTop.addEventListener('click', () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth'
+            behavior: 'auto' // Changed from 'smooth' for performance
         });
     });
 }
@@ -271,118 +291,101 @@ function initContactForm() {
     });
 }
 
-// Skill bars animation with Intersection Observer
+// Skill bars animation with minimal animations for performance
 function initSkillBars() {
     if (skillBars.length === 0) return;
     
-    const animateSkillBars = () => {
-        skillBars.forEach(bar => {
-            const targetWidth = bar.style.width;
-            bar.style.width = '0%';
-            
-            setTimeout(() => {
-                bar.style.width = targetWidth;
-            }, 100);
-        });
-    };
-
-    // Use Intersection Observer for better performance
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateSkillBars();
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    const skillsSection = document.querySelector('.skills');
-    if (skillsSection) {
-        observer.observe(skillsSection);
-    }
+    // Show skill bars immediately without animations for better performance
+    skillBars.forEach(bar => {
+        // Keep the target width but remove animations
+        bar.style.transition = 'none';
+    });
 }
 
-// Project cards interaction
+// Project cards interaction with minimal effects for performance
 function initProjectCards() {
     if (projectCards.length === 0) return;
     
-    projectCards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            card.style.transform = 'translateY(-10px)';
-        });
-        
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'translateY(0)';
-        });
-    });
+    // Remove hover animations for better performance
+    // projectCards.forEach(card => {
+    //     card.addEventListener('mouseenter', () => {
+    //         card.style.transform = 'translateY(-10px)';
+    //     });
+    //     
+    //     card.addEventListener('mouseleave', () => {
+    //         card.style.transform = 'translateY(0)';
+    //     });
+    // });
 }
 
-// Timeline animation with staggered reveals
+// Timeline animation with minimal animations for performance
 function initTimelineAnimation() {
     if (timelineItems.length === 0) return;
     
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                // Add a staggered delay for each item
-                setTimeout(() => {
-                    entry.target.classList.add('animate');
-                    
-                    // Add subtle animation to timeline markers
-                    const marker = entry.target.querySelector('.timeline-marker');
-                    if (marker) {
-                        marker.style.animation = 'pulse 0.6s ease-out';
-                    }
-                    
-                    // Animate the content with a slight delay
-                    setTimeout(() => {
-                        const content = entry.target.querySelector('.timeline-content');
-                        if (content) {
-                            content.style.opacity = '1';
-                            content.style.transform = 'translateY(0)';
-                        }
-                    }, 200);
-                    
-                }, index * 300);
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { 
-        threshold: 0.2,
-        rootMargin: '0px 0px -50px 0px'
-    });
-
+    // Make all timeline items visible immediately for better performance
     timelineItems.forEach(item => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(40px)';
-        item.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+        item.style.opacity = '1';
+        item.style.transform = 'translateY(0)';
+        item.style.transition = 'none'; // Remove transitions for performance
         
-        // Initialize content opacity
         const content = item.querySelector('.timeline-content');
         if (content) {
-            content.style.opacity = '0';
-            content.style.transform = 'translateY(20px)';
-            content.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+            content.style.opacity = '1';
+            content.style.transform = 'translateY(0)';
+            content.style.transition = 'none'; // Remove transitions for performance
         }
-        
-        observer.observe(item);
     });
 }
 
-// Parallax effects with performance optimization
-function initParallaxEffects() {
-    const parallaxElements = document.querySelectorAll('.hero, .profile-card');
+// Function to ensure experience section is visible
+function ensureExperienceVisibility() {
+    const experienceSection = document.getElementById('experience');
+    const timelineItems = document.querySelectorAll('.timeline-item');
     
-    const handleParallax = throttle(() => {
-        const scrolled = window.pageYOffset;
-        parallaxElements.forEach(element => {
-            const rate = scrolled * -0.5;
-            element.style.transform = `translateY(${rate}px)`;
-        });
-    }, 16);
-
-    window.addEventListener('scroll', handleParallax, { passive: true });
+    console.log('Experience section found:', experienceSection);
+    console.log('Timeline items found:', timelineItems.length);
+    
+    if (experienceSection && timelineItems.length > 0) {
+        // Ensure the section is visible
+        experienceSection.style.display = 'block';
+        experienceSection.style.visibility = 'visible';
+        experienceSection.style.opacity = '1';
+        
+        // Check if we're on mobile
+        const isMobile = window.innerWidth <= 768;
+        console.log('Is mobile:', isMobile);
+        
+        if (isMobile) {
+            // On mobile, ensure all timeline items are visible
+            timelineItems.forEach(item => {
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+                
+                const content = item.querySelector('.timeline-content');
+                if (content) {
+                    content.style.opacity = '1';
+                    content.style.transform = 'translateY(0)';
+                }
+            });
+            console.log('Mobile timeline items made visible');
+        }
+    }
 }
+
+// Parallax effects - Disabled for performance
+// function initParallaxEffects() {
+//     const parallaxElements = document.querySelectorAll('.hero, .profile-card');
+//     
+//     const handleParallax = throttle(() => {
+//         const scrolled = window.pageYOffset;
+//         parallaxElements.forEach(element => {
+//             const rate = scrolled * -0.5;
+//             element.style.transform = `translateY(${rate}px)`;
+//         });
+//     }, 16);
+// 
+//     window.addEventListener('scroll', handleParallax, { passive: true });
+// }
 
 // Mobile menu functionality
 function initMobileMenu() {
@@ -398,7 +401,7 @@ function initMobileMenu() {
     });
 }
 
-// Scroll progress indicator
+// Scroll progress indicator with minimal animations for performance
 function initScrollProgress() {
     const progressBar = document.createElement('div');
     progressBar.style.cssText = `
@@ -409,7 +412,7 @@ function initScrollProgress() {
         height: 3px;
         background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
         z-index: 1001;
-        transition: width 0.1s ease;
+        transition: none;
     `;
     document.body.appendChild(progressBar);
     
@@ -418,51 +421,9 @@ function initScrollProgress() {
         const docHeight = document.documentElement.scrollHeight - window.innerHeight;
         const scrollPercent = (scrollTop / docHeight) * 100;
         progressBar.style.width = scrollPercent + '%';
-    }, 16);
+    }, 32); // Increased throttle for better performance
 
     window.addEventListener('scroll', updateProgress, { passive: true });
-}
-
-// Custom cursor effects
-function initCursorEffects() {
-    const cursor = document.createElement('div');
-    cursor.style.cssText = `
-        position: fixed;
-        width: 20px;
-        height: 20px;
-        background: var(--primary-color);
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9999;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        transform: translate(-50%, -50%);
-    `;
-    document.body.appendChild(cursor);
-    
-    let mouseX = 0, mouseY = 0;
-    let cursorX = 0, cursorY = 0;
-    
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        cursor.style.opacity = '1';
-    }, { passive: true });
-    
-    // Smooth cursor following
-    const animateCursor = () => {
-        cursorX += (mouseX - cursorX) * 0.1;
-        cursorY += (mouseY - cursorY) * 0.1;
-        cursor.style.left = cursorX + 'px';
-        cursor.style.top = cursorY + 'px';
-        raf(animateCursor);
-    };
-    animateCursor();
-    
-    // Hide cursor when leaving window
-    document.addEventListener('mouseleave', () => {
-        cursor.style.opacity = '0';
-    });
 }
 
 // Notification system
@@ -552,24 +513,25 @@ function initLazyLoading() {
     });
 }
 
-// Intersection Observer for general animations
+// Intersection Observer for general animations - Simplified for performance
 function initIntersectionObserver() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
-            }
-        });
-    }, observerOptions);
-    
-    // Observe elements that need animation
-    const animateElements = document.querySelectorAll('.skill-category, .project-card, .contact-item');
-    animateElements.forEach(el => observer.observe(el));
+    // Disabled animations for better performance
+    // const observerOptions = {
+    //     threshold: 0.1,
+    //     rootMargin: '0px 0px -50px 0px'
+    // };
+    // 
+    // const observer = new IntersectionObserver((entries) => {
+    //     entries.forEach(entry => {
+    //         if (entry.isIntersecting) {
+    //             entry.target.classList.add('animate-in');
+    //         }
+    //     });
+    // }, observerOptions);
+    // 
+    // // Observe elements that need animation
+    // const animateElements = document.querySelectorAll('.skill-category, .project-card, .contact-item');
+    // animateElements.forEach(el => observer.observe(el));
 }
 
 // Preload critical resources
