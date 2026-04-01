@@ -1,140 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Portfolio Website - Gourav Jain -->
-<!-- Performance Optimized -->
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Gourav Jain - Global Engineering Leader | GenAI & AI-Driven Engineering | Microsoft Azure MVP</title>
-    <meta name="description" content="Gourav Jain - Global Engineering Leader, Sr. Engineering Manager & India Engineering Head at iOL, Microsoft Azure MVP & MCT, GenAI & AI-Driven Engineering, Fintech & Payments, Distributed Systems, .NET · Golang · Azure · GCP | PCI-DSS">
-    
-    <!-- Critical CSS Inline -->
-    <style>
-        /* Critical CSS for above-the-fold content */
-        *{margin:0;padding:0;box-sizing:border-box}:root{--primary-color:#2563eb;--primary-dark:#1d4ed8;--primary-light:#3b82f6;--text-dark:#1f2937;--text-light:#6b7280;--bg-light:#f8fafc;--bg-white:#ffffff;--border-color:#e5e7eb;--border-radius:12px;--transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1)}html{scroll-behavior:smooth;font-size:16px}body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;color:var(--text-dark);background-color:var(--bg-light);overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.container{max-width:1200px;margin:0 auto;padding:0 20px}.navbar{position:fixed;top:0;width:100%;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);z-index:1000;padding:1rem 0;transition:var(--transition);border-bottom:1px solid var(--border-color)}.nav-container{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}.nav-logo{font-size:1.5rem;font-weight:800;color:var(--primary-color);background:linear-gradient(135deg,var(--primary-color),var(--primary-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.nav-menu{display:flex;list-style:none;gap:2rem;align-items:center}.nav-link{text-decoration:none;color:var(--text-dark);font-weight:500;transition:var(--transition);position:relative;padding:0.5rem 0}.nav-link:hover{color:var(--primary-color)}.hero{min-height:100vh;display:flex;align-items:center;position:relative;background:linear-gradient(135deg,var(--bg-light) 0%,var(--bg-white) 100%);overflow:hidden}.hero-content{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;min-height:80vh}.hero-title{font-size:3.5rem;font-weight:800;color:var(--text-dark);margin-bottom:1rem;line-height:1.1}.hero-subtitle{font-size:1.5rem;color:var(--primary-color);font-weight:600;margin-bottom:1rem}.hero-description{font-size:1.1rem;color:var(--text-light);margin-bottom:2rem;line-height:1.7}.btn{display:inline-block;padding:0.75rem 1.5rem;text-decoration:none;border-radius:var(--border-radius);font-weight:600;transition:var(--transition);border:none;cursor:pointer;font-size:1rem;text-align:center}.btn-primary{background:linear-gradient(135deg,var(--primary-color),var(--primary-light));color:white}.btn-secondary{background:transparent;color:var(--primary-color);border:2px solid var(--primary-color)}.profile-card{position:relative;background:white;border-radius:20px;padding:1rem;box-shadow:0 20px 25px -5px rgba(0,0,0,0.1);transition:var(--transition);transform:perspective(1000px) rotateY(-5deg)}.profile-img{width:200px;height:200px;border-radius:50%;object-fit:cover;border:4px solid var(--primary-color)}.profile-badge{position:absolute;top:-10px;right:-10px;background:#f59e0b;color:white;padding:0.5rem 1rem;border-radius:20px;font-size:0.875rem;font-weight:600;display:flex;align-items:center;gap:0.5rem}.hamburger{display:none;flex-direction:column;cursor:pointer;z-index:1001}.hamburger span{width:25px;height:3px;background:var(--text-dark);margin:3px 0;transition:var(--transition)}@media (max-width:768px){.nav-menu{position:fixed;left:-100%;top:0;flex-direction:column;background-color:white;width:100%;text-align:center;transition:0.3s;padding:2rem 0;height:100vh;justify-content:center;gap:2rem}.nav-menu.active{left:0}.hamburger{display:flex}.hero-content{grid-template-columns:1fr;text-align:center;gap:2rem;min-height:70vh}.hero-title{font-size:2.5rem}}
-    </style>
-    
-    <!-- Performance Optimizations -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourav Jain — Global Engineering Leader | Microsoft Azure MVP</title>
+    <meta name="description" content="Gourav Jain — Global Engineering Leader, Sr. Engineering Manager & India Engineering Head at iOL. Microsoft Azure MVP · MCT | GenAI & Fintech | .NET · Golang · Azure · GCP">
+    <meta name="theme-color" content="#2563eb">
+
+    <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://unpkg.com">
-    <link rel="preconnect" href="https://images.unsplash.com">
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="script.js" as="script">
-    <link rel="preload" href="image.png" as="image">
-    
-    <!-- Non-critical CSS -->
-    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="styles.css"></noscript>
-    
-    <!-- Font Awesome with performance optimization -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"></noscript>
-    
-    <!-- Google Fonts with display=swap for better performance -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
-    
-    <!-- Mobile Optimizations -->
-    <meta name="theme-color" content="#2563eb">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="Gourav Jain Portfolio">
-    
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="/manifest.json">
-    
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="image.png">
-    
-    <!-- DNS Prefetch for external resources -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
-    <link rel="dns-prefetch" href="//unpkg.com">
-    <link rel="dns-prefetch" href="//images.unsplash.com">
+    <link rel="manifest" href="/manifest.json">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <span>Gourav Jain</span>
-            </div>
-            <ul class="nav-menu">
+            <a href="#home" class="nav-logo">
+                <span class="logo-gj">GJ</span>
+                <span class="logo-text">Gourav Jain</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#competencies" class="nav-link">Competencies</a></li>
+                <li><a href="#competencies" class="nav-link">Skills</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="Gourav_CV.pdf" download class="btn btn-nav-cta"><i class="fas fa-download"></i> Download CV</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ===== HERO SECTION ===== -->
     <section id="home" class="hero">
+        <!-- Animated Background -->
+        <div class="hero-bg">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+            <div class="grid-overlay"></div>
+        </div>
+
         <div class="hero-container">
             <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">Gourav Jain</h1>
-                    <p class="hero-subtitle">Global Engineering Leader | Sr. Engineering Manager & India Engineering Head</p>
-                    <p class="hero-description">16.5+ years scaling cloud-native distributed systems across Fintech, Logistics & E-commerce. Microsoft Azure MVP · MCT | GenAI & AI-Driven Engineering | .NET · Golang · Azure · GCP | PCI-DSS</p>
+                <!-- Left: Text -->
+                <div class="hero-text" data-aos="fade-right">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        <span>Open to Global Opportunities</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Gourav Jain</span>
+                    </h1>
+                    <div class="hero-subtitle-wrap">
+                        <span class="typing-prefix">I'm a </span>
+                        <span class="typing-text" id="typingText"></span>
+                        <span class="typing-cursor">|</span>
+                    </div>
+                    <p class="hero-description">
+                        16.5+ years scaling cloud-native distributed systems across Fintech, Logistics &amp; E-commerce. Leading 35+ engineers across 6 countries. Microsoft Azure MVP · MCT · PCI-DSS.
+                    </p>
+                    <div class="hero-tags">
+                        <span class="hero-tag"><i class="fas fa-map-marker-alt"></i> New Delhi, India</span>
+                        <span class="hero-tag"><i class="fas fa-briefcase"></i> iOL — Sr. Eng. Manager</span>
+                        <span class="hero-tag"><i class="fas fa-award"></i> Azure MVP</span>
+                    </div>
                     <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                        <a href="#about" class="btn btn-secondary">Learn More</a>
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Get In Touch
+                        </a>
+                        <a href="Gourav_CV.pdf" download class="btn btn-secondary">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                        <a href="#resume" class="btn btn-ghost">
+                            <i class="fas fa-eye"></i> View Resume
+                        </a>
+                    </div>
+                    <div class="hero-socials">
+                        <a href="https://linkedin.com/in/gourav8jain" target="_blank" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/gourav8jain" target="_blank" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.gourav8jain.wordpress.com" target="_blank" class="social-icon" title="Blog"><i class="fas fa-blog"></i></a>
+                        <a href="https://www.credly.com/users/gourav8jain/badges" target="_blank" class="social-icon" title="Credly Badges"><i class="fas fa-certificate"></i></a>
+                        <a href="mailto:gourav8jain@gmail.com" class="social-icon" title="Email"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <div class="profile-card">
-                        <img src="image.png" alt="Gourav Jain" class="profile-img">
+
+                <!-- Right: Profile -->
+                <div class="hero-image" data-aos="fade-left">
+                    <div class="profile-wrapper">
+                        <div class="profile-ring"></div>
+                        <div class="profile-ring ring-2"></div>
+                        <div class="profile-card">
+                            <img src="image.png" alt="Gourav Jain" class="profile-img">
+                        </div>
+                        <!-- Floating badges -->
+                        <div class="float-badge badge-azure">
+                            <i class="fas fa-cloud"></i>
+                            <span>Azure MVP</span>
+                        </div>
+                        <div class="float-badge badge-ai">
+                            <i class="fas fa-brain"></i>
+                            <span>GenAI</span>
+                        </div>
+                        <div class="float-badge badge-team">
+                            <i class="fas fa-users"></i>
+                            <span>35+ Engineers</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="scroll-indicator">
-                <div class="scroll-arrow"></div>
+
+            <!-- Stats Bar -->
+            <div class="hero-stats">
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <span class="stat-num" data-count="16">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-lbl">Years Experience</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                    <span class="stat-num" data-count="35">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-lbl">Engineers Led</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                    <span class="stat-num" data-count="6">0</span>
+                    <span class="stat-lbl">Countries</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+                    <span class="stat-num" data-count="150">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-lbl">Tech Articles</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="500">
+                    <span class="stat-num" data-count="6">0</span>
+                    <span class="stat-lbl">Companies</span>
+                </div>
             </div>
         </div>
+
+        <a href="#about" class="scroll-down" aria-label="Scroll down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about" class="about section">
         <div class="container">
-            <div class="section-header">
-                <h2>About Me</h2>
-                <p>Passionate engineering leader with expertise in building scalable solutions and leading high-performing teams</p>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">About Me</span>
+                <h2>Engineering Leadership <span class="gradient-text">& Innovation</span></h2>
+                <p>Building systems that scale and teams that last — across Fintech, Logistics &amp; E-commerce</p>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Global Engineering Leadership & Innovation</h3>
-                    <p>Over 16.5 years. 6 companies. 1 mission — build systems that scale and teams that last. Currently Sr. Engineering Manager & India Engineering Head at iOL, owning Wallet 2.0 (multi-currency travel wallet) and iOL Pay (payment orchestration & supplier settlement) — platforms driving 50%+ of company revenue.</p>
-                    <p>I lead 35+ engineers across 6 countries — India, New Zealand, Ukraine, Poland, Dubai & Pakistan. Delivered PCI-DSS certification end-to-end, championed GenAI adoption (Claude, Cursor) delivering a 25% productivity uplift, and slashed client tickets from 5,000+ to under 100 via Kibana → Teams alerting. Microsoft Azure MVP · C# Corner MVP · Microsoft Certified Trainer · Author of "Understanding Azure: A Beginner's Guide".</p>
+            <div class="about-grid">
+                <div class="about-text" data-aos="fade-right">
+                    <h3>Over 16.5 years. 6 companies. 1 mission.</h3>
+                    <p>Currently Sr. Engineering Manager &amp; India Engineering Head at <strong>iOL</strong>, owning <strong>Wallet 2.0</strong> (multi-currency travel wallet) and <strong>iOL Pay</strong> (payment orchestration &amp; supplier settlement) — platforms driving 50%+ of company revenue.</p>
+                    <p>I lead 35+ engineers across 6 countries — India, New Zealand, Ukraine, Poland, Dubai &amp; Pakistan. Delivered PCI-DSS certification end-to-end, championed GenAI adoption (Claude, Cursor) delivering a <strong>25% productivity uplift</strong>, and slashed client tickets from 5,000+ to under 100.</p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-trophy"></i>
+                            <div>
+                                <strong>Microsoft Azure MVP</strong>
+                                <span>2× Recipient · C# Corner MVP</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-book"></i>
+                            <div>
+                                <strong>Published Author</strong>
+                                <span>"Understanding Azure: A Beginner's Guide"</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-microphone-alt"></i>
+                            <div>
+                                <strong>Global Speaker</strong>
+                                <span>30+ tech events · India, UK, Dubai &amp; more</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-users-cog"></i>
+                            <div>
+                                <strong>Community Founder</strong>
+                                <span>Microsoft &amp; Cloud Enthusiasts Meetup</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-image">
+                <div class="about-stats" data-aos="fade-left">
                     <div class="stats-grid">
-                        <div class="stat-item">
-                            <div class="stat-number">16.5+</div>
-                            <div class="stat-label">Years Experience</div>
+                        <div class="stat-box">
+                            <div class="stat-icon" style="--icon-color:#3b82f6"><i class="fas fa-clock"></i></div>
+                            <div class="stat-box-num counter" data-count="16">0</div>
+                            <div class="stat-box-suffix">+ Years</div>
+                            <div class="stat-box-lbl">Experience</div>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number">35+</div>
-                            <div class="stat-label">Engineers Led Globally</div>
+                        <div class="stat-box">
+                            <div class="stat-icon" style="--icon-color:#8b5cf6"><i class="fas fa-users"></i></div>
+                            <div class="stat-box-num counter" data-count="35">0</div>
+                            <div class="stat-box-suffix">+ Global</div>
+                            <div class="stat-box-lbl">Engineers Led</div>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number">6</div>
-                            <div class="stat-label">Countries Across Team</div>
+                        <div class="stat-box">
+                            <div class="stat-icon" style="--icon-color:#06b6d4"><i class="fas fa-globe"></i></div>
+                            <div class="stat-box-num counter" data-count="6">0</div>
+                            <div class="stat-box-suffix">Countries</div>
+                            <div class="stat-box-lbl">Team Spread</div>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number">150+</div>
-                            <div class="stat-label">Tech Articles Published</div>
+                        <div class="stat-box">
+                            <div class="stat-icon" style="--icon-color:#f59e0b"><i class="fas fa-pen-nib"></i></div>
+                            <div class="stat-box-num counter" data-count="150">0</div>
+                            <div class="stat-box-suffix">+ Articles</div>
+                            <div class="stat-box-lbl">Published</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-icon" style="--icon-color:#10b981"><i class="fas fa-shield-alt"></i></div>
+                            <div class="stat-box-num">PCI</div>
+                            <div class="stat-box-suffix">-DSS</div>
+                            <div class="stat-box-lbl">Certified</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-icon" style="--icon-color:#ef4444"><i class="fas fa-rocket"></i></div>
+                            <div class="stat-box-num counter" data-count="25">0</div>
+                            <div class="stat-box-suffix">% Uplift</div>
+                            <div class="stat-box-lbl">via GenAI</div>
                         </div>
                     </div>
                 </div>
@@ -142,277 +251,377 @@
         </div>
     </section>
 
-    <!-- Core Competencies Section -->
-    <section id="competencies" class="competencies">
+    <!-- ===== COMPETENCIES SECTION ===== -->
+    <section id="competencies" class="competencies section section-alt">
         <div class="container">
-            <div class="section-header">
-                <h2>Core Competencies</h2>
-                <p>Expertise across multiple domains and technologies</p>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Core Competencies</span>
+                <h2>What I <span class="gradient-text">Bring to the Table</span></h2>
+                <p>Deep expertise across engineering leadership, cloud, fintech, and AI-driven development</p>
             </div>
             <div class="competencies-grid">
-                <div class="competency-card">
-                    <div class="competency-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
+
+                <div class="comp-card" data-aos="fade-up" data-aos-delay="50">
+                    <div class="comp-icon" style="--c1:#2563eb;--c2:#3b82f6"><i class="fas fa-code"></i></div>
                     <h3>Full-Stack Engineering</h3>
-                    <p>Expert in building scalable, cloud-native applications and distributed microservices architectures across Fintech & Logistics.</p>
-                    <div class="competency-tags">
-                        <span class="tag">.NET Core</span>
-                        <span class="tag">Golang</span>
-                        <span class="tag">Node.js / NestJS</span>
-                        <span class="tag">React</span>
-                        <span class="tag">Python</span>
+                    <p>Expert in scalable, cloud-native applications and distributed microservices across Fintech &amp; Logistics.</p>
+                    <div class="comp-tags">
+                        <span>.NET Core</span><span>Golang</span><span>Node.js / NestJS</span><span>React</span><span>Python</span>
                     </div>
                 </div>
-                <div class="competency-card">
-                    <div class="competency-icon">
-                        <i class="fas fa-cloud"></i>
-                    </div>
+
+                <div class="comp-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="comp-icon" style="--c1:#06b6d4;--c2:#0891b2"><i class="fas fa-cloud"></i></div>
                     <h3>Cloud Architecture</h3>
-                    <p>Proficient in designing and implementing cloud-native solutions across Azure, GCP, and AWS with Kubernetes & Docker at scale.</p>
-                    <div class="competency-tags">
-                        <span class="tag">Azure</span>
-                        <span class="tag">GCP</span>
-                        <span class="tag">AWS</span>
-                        <span class="tag">Kubernetes</span>
-                        <span class="tag">Kafka</span>
+                    <p>Designing cloud-native solutions across Azure, GCP, and AWS with Kubernetes &amp; Docker at scale.</p>
+                    <div class="comp-tags">
+                        <span>Azure</span><span>GCP</span><span>AWS</span><span>Kubernetes</span><span>Kafka</span>
                     </div>
                 </div>
-                <div class="competency-card">
-                    <div class="competency-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
+
+                <div class="comp-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="comp-icon" style="--c1:#8b5cf6;--c2:#7c3aed"><i class="fas fa-users"></i></div>
                     <h3>Global Team Leadership</h3>
-                    <p>8+ years leading 50+ engineers across Cards, Lending, Payments & Platform. Built high-performance distributed teams across 6 countries.</p>
-                    <div class="competency-tags">
-                        <span class="tag">Agile</span>
-                        <span class="tag">Mentoring</span>
-                        <span class="tag">Hiring</span>
-                        <span class="tag">Career Pathing</span>
+                    <p>8+ years leading 50+ engineers across Cards, Lending, Payments &amp; Platform across 6 countries.</p>
+                    <div class="comp-tags">
+                        <span>Agile</span><span>Mentoring</span><span>Hiring</span><span>Career Pathing</span>
                     </div>
                 </div>
-                <div class="competency-card">
-                    <div class="competency-icon">
-                        <i class="fas fa-credit-card"></i>
-                    </div>
-                    <h3>Fintech & Payments</h3>
-                    <p>Deep expertise in payment orchestration, card issuance, lending systems, and PCI-DSS compliance across global fintech platforms.</p>
-                    <div class="competency-tags">
-                        <span class="tag">PCI-DSS</span>
-                        <span class="tag">Checkout.com</span>
-                        <span class="tag">ConnexPay</span>
-                        <span class="tag">ACH / MRDC</span>
+
+                <div class="comp-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="comp-icon" style="--c1:#f59e0b;--c2:#d97706"><i class="fas fa-credit-card"></i></div>
+                    <h3>Fintech &amp; Payments</h3>
+                    <p>Deep expertise in payment orchestration, card issuance, lending systems, and PCI-DSS compliance.</p>
+                    <div class="comp-tags">
+                        <span>PCI-DSS</span><span>Checkout.com</span><span>ConnexPay</span><span>ACH / MRDC</span>
                     </div>
                 </div>
-                <div class="competency-card">
-                    <div class="competency-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>DevOps & Observability</h3>
-                    <p>Expert in CI/CD automation, containerization, and proactive observability — reducing pipeline times by 45% and achieving 99.98% uptime.</p>
-                    <div class="competency-tags">
-                        <span class="tag">GitHub Actions</span>
-                        <span class="tag">Azure DevOps</span>
-                        <span class="tag">Kibana</span>
-                        <span class="tag">Opsgenie</span>
+
+                <div class="comp-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="comp-icon" style="--c1:#10b981;--c2:#059669"><i class="fas fa-cogs"></i></div>
+                    <h3>DevOps &amp; Observability</h3>
+                    <p>CI/CD automation, containerization, and proactive observability — 45% faster pipelines, 99.98% uptime.</p>
+                    <div class="comp-tags">
+                        <span>GitHub Actions</span><span>Azure DevOps</span><span>Kibana</span><span>Opsgenie</span>
                     </div>
                 </div>
-                <div class="competency-card">
-                    <div class="competency-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>GenAI & AI-Driven Engineering</h3>
-                    <p>Champion of GenAI adoption (Claude, Cursor, GitHub Copilot) delivering 25% dev velocity boosts. Azure ML, LLM integrations, and agentic AI architectures.</p>
-                    <div class="competency-tags">
-                        <span class="tag">LLM</span>
-                        <span class="tag">Claude</span>
-                        <span class="tag">Azure ML</span>
-                        <span class="tag">Agentic AI</span>
+
+                <div class="comp-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="comp-icon" style="--c1:#ec4899;--c2:#db2777"><i class="fas fa-brain"></i></div>
+                    <h3>GenAI &amp; LLM Engineering</h3>
+                    <p>Champion of GenAI adoption (Claude, Cursor, Copilot) delivering 25% dev velocity boosts &amp; agentic AI architectures.</p>
+                    <div class="comp-tags">
+                        <span>LLM</span><span>Claude</span><span>Azure ML</span><span>Agentic AI</span>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
+    <!-- ===== EXPERIENCE SECTION ===== -->
+    <section id="experience" class="experience section">
         <div class="container">
-            <div class="section-header">
-                <h2>Professional Experience</h2>
-                <p>My journey through leading organizations and delivering impactful solutions</p>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Career Journey</span>
+                <h2>Professional <span class="gradient-text">Experience</span></h2>
+                <p>16.5+ years building world-class engineering teams and systems across 6 companies</p>
             </div>
             <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="marker-dot"></div>
-                        <div class="marker-line"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Sr. Engineering Manager & India Engineering Head</h3>
-                            <span class="company">iOL</span>
-                            <span class="period">Sep 2025 - Present</span>
+
+                <!-- iOL -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot" style="--dot-color:#2563eb"></div>
+                    <div class="timeline-card">
+                        <div class="tl-header">
+                            <div class="tl-company-info">
+                                <div class="tl-company-badge" style="--badge-bg:#eff6ff;--badge-color:#2563eb">iOL</div>
+                                <div>
+                                    <h3>Sr. Engineering Manager &amp; India Engineering Head</h3>
+                                    <div class="tl-meta">
+                                        <span class="tl-company">iOL</span>
+                                        <span class="tl-period"><i class="fas fa-calendar"></i> Sep 2025 – Present</span>
+                                        <span class="tl-location"><i class="fas fa-map-marker-alt"></i> Gurugram</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="tl-current-badge">Current</span>
                         </div>
-                        <p class="company-desc">Travel Fintech & Payment Orchestration · Gurugram</p>
-                        <ul class="achievements">
-                            <li>Own end-to-end engineering for Wallet 2.0 (multi-currency travel wallet) and iOL Pay (payment orchestration & supplier settlement) — platforms driving 50%+ of company revenue</li>
-                            <li>Lead a 35+ member global engineering team across 6 countries — India, New Zealand, Ukraine, Poland, Dubai, and Pakistan</li>
-                            <li>Architected mission-critical fintech integrations — Checkout.com, ConnexPay, WEX, Citi, ICCP & Trip Link — powering seamless checkout, supplier settlement, and virtual card issuance at scale</li>
-                            <li>Drove PCI-DSS certification end-to-end from engineering, embedding security, compliance, and audit readiness into the core delivery process</li>
-                            <li>Championed GenAI adoption (Claude, Cursor) delivering a measurable 25% productivity uplift; slashed client tickets from 5,000+ to under 100 via Kibana → Teams alerting</li>
-                            <li>Redesigned hiring and onboarding achieving a 35% efficiency improvement; unified engineering knowledge on Azure DevOps Wiki — 40% better collaboration</li>
+                        <p class="tl-desc">Travel Fintech &amp; Payment Orchestration — own Wallet 2.0 (multi-currency travel wallet) and iOL Pay (payment orchestration &amp; supplier settlement), platforms driving 50%+ of company revenue.</p>
+                        <ul class="tl-achievements">
+                            <li><i class="fas fa-check-circle"></i> Lead 35+ engineers across 6 countries — India, New Zealand, Ukraine, Poland, Dubai &amp; Pakistan</li>
+                            <li><i class="fas fa-check-circle"></i> Architected Checkout.com, ConnexPay, WEX, Citi, ICCP &amp; Trip Link integrations at scale</li>
+                            <li><i class="fas fa-check-circle"></i> Delivered PCI-DSS certification end-to-end from engineering; embedded security into core delivery</li>
+                            <li><i class="fas fa-check-circle"></i> Championed GenAI (Claude, Cursor) → <strong>25% productivity uplift</strong>; slashed tickets from 5,000+ → under 100</li>
+                            <li><i class="fas fa-check-circle"></i> Redesigned hiring &amp; onboarding → <strong>35% efficiency gain</strong>; unified docs on Azure DevOps Wiki → 40% better collaboration</li>
                         </ul>
-                        <div class="tech-stack">
-                            <span class="tech-tag">.NET Core</span>
-                            <span class="tech-tag">Golang</span>
-                            <span class="tech-tag">Azure</span>
-                            <span class="tech-tag">GCP</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Microservices</span>
-                            <span class="tech-tag">PCI-DSS</span>
+                        <div class="tl-tags">
+                            <span>.NET Core</span><span>Golang</span><span>Azure</span><span>GCP</span><span>PostgreSQL</span><span>Microservices</span><span>PCI-DSS</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="marker-dot"></div>
-                        <div class="marker-line"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Senior Engineering Manager (Full Stack)</h3>
-                            <span class="company">Delhivery</span>
-                            <span class="period">Nov 2024 - Sep 2025</span>
+                <!-- Delhivery -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot" style="--dot-color:#8b5cf6"></div>
+                    <div class="timeline-card">
+                        <div class="tl-header">
+                            <div class="tl-company-info">
+                                <div class="tl-company-badge" style="--badge-bg:#f5f3ff;--badge-color:#8b5cf6">DEL</div>
+                                <div>
+                                    <h3>Senior Engineering Manager (Full Stack)</h3>
+                                    <div class="tl-meta">
+                                        <span class="tl-company">Delhivery</span>
+                                        <span class="tl-period"><i class="fas fa-calendar"></i> Nov 2024 – Sep 2025</span>
+                                        <span class="tl-location"><i class="fas fa-map-marker-alt"></i> Gurugram</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <p class="company-desc">Transportation & Logistics · Gurugram</p>
-                        <ul class="achievements">
-                            <li>Led engineering for logistics-critical services at scale, overseeing 30+ engineers and 3 managers across Payouts, Slots, and Attendance platforms</li>
-                            <li>Scaled 3 core systems by 40% in performance and availability; reduced CI/CD pipeline time by 45% via containerization, parallel jobs, and GitHub Actions optimization</li>
-                            <li>Delivered ACKO integration and slot templating — improved payout accuracy by 30% and cut manual escalations by 50%</li>
-                            <li>Led AI-driven productivity initiatives (GitHub Copilot, Cursor AI) increasing dev velocity by 25%; drove observability achieving 99.98% uptime</li>
-                            <li>Reduced new developer ramp-up time by 50% through internal tools and curated onboarding kits</li>
+                        <p class="tl-desc">Transportation &amp; Logistics — overseeing 30+ engineers &amp; 3 managers across Payouts, Slots, and Attendance platforms.</p>
+                        <ul class="tl-achievements">
+                            <li><i class="fas fa-check-circle"></i> Scaled 3 core systems <strong>+40%</strong> in performance; reduced CI/CD pipeline time by <strong>45%</strong></li>
+                            <li><i class="fas fa-check-circle"></i> Delivered ACKO integration — improved payout accuracy <strong>30%</strong>, cut manual escalations <strong>50%</strong></li>
+                            <li><i class="fas fa-check-circle"></i> Led AI productivity initiatives (GitHub Copilot, Cursor AI) → <strong>25% dev velocity boost</strong></li>
+                            <li><i class="fas fa-check-circle"></i> Drove observability with Kibana dashboards — achieving <strong>99.98% uptime</strong></li>
+                            <li><i class="fas fa-check-circle"></i> Reduced new dev ramp-up time by <strong>50%</strong> through internal tooling &amp; onboarding kits</li>
                         </ul>
-                        <div class="tech-stack">
-                            <span class="tech-tag">.NET Core</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">ReactJS</span>
-                            <span class="tech-tag">Azure</span>
-                            <span class="tech-tag">AWS</span>
-                            <span class="tech-tag">Kibana</span>
+                        <div class="tl-tags">
+                            <span>.NET Core</span><span>Python</span><span>ReactJS</span><span>Azure</span><span>AWS</span><span>Kibana</span><span>GitHub Actions</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="marker-dot"></div>
-                        <div class="marker-line"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Group Engineering Manager / Director of Engineering (Full Stack)</h3>
-                            <span class="company">Novo</span>
-                            <span class="period">Jan 2023 - Nov 2024</span>
+                <!-- Novo -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot" style="--dot-color:#06b6d4"></div>
+                    <div class="timeline-card">
+                        <div class="tl-header">
+                            <div class="tl-company-info">
+                                <div class="tl-company-badge" style="--badge-bg:#ecfeff;--badge-color:#06b6d4">NOV</div>
+                                <div>
+                                    <h3>Group Engineering Manager / Director of Engineering</h3>
+                                    <div class="tl-meta">
+                                        <span class="tl-company">Novo</span>
+                                        <span class="tl-period"><i class="fas fa-calendar"></i> Jan 2023 – Nov 2024</span>
+                                        <span class="tl-location"><i class="fas fa-map-marker-alt"></i> Gurugram</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <p class="company-desc">Fintech & Digital Banking · Gurugram</p>
-                        <ul class="achievements">
-                            <li>Led a 40+ member engineering org with 4 engineering managers across Cards, Lending/Loans, Payments, and Core Platform — driving 95% of Novo's $50M+ annual revenue</li>
-                            <li>Owned delivery for critical payments infrastructure including ACH Push/Pull, MRDC, Mailed Checks, and Transferwise integrations</li>
-                            <li>Modernized platform with observability, alerting, CI/CD, and DevEx improvements, ensuring 99.9%+ uptime</li>
-                            <li>Spearheaded infra upgrades, SonarQube code quality tooling, RFC/code review practices; launched Engineering All-Hands and R&R Programs</li>
+                        <p class="tl-desc">Fintech &amp; Digital Banking — led 40+ member org with 4 EMs across Cards, Lending, Payments &amp; Core Platform, driving <strong>95% of Novo's $50M+ annual revenue</strong>.</p>
+                        <ul class="tl-achievements">
+                            <li><i class="fas fa-check-circle"></i> Owned ACH Push/Pull, MRDC, Mailed Checks, and Transferwise integrations ensuring 99.9%+ uptime</li>
+                            <li><i class="fas fa-check-circle"></i> Modernized platform with observability, alerting, CI/CD &amp; DevEx improvements</li>
+                            <li><i class="fas fa-check-circle"></i> Spearheaded SonarQube, RFC/code review practices, infra upgrades &amp; Engineering All-Hands</li>
                         </ul>
-                        <div class="tech-stack">
-                            <span class="tech-tag">.NET Core</span>
-                            <span class="tech-tag">NestJS</span>
-                            <span class="tech-tag">TypeORM</span>
-                            <span class="tech-tag">Postgres</span>
-                            <span class="tech-tag">Azure</span>
-                            <span class="tech-tag">AWS</span>
-                            <span class="tech-tag">ELK</span>
+                        <div class="tl-tags">
+                            <span>.NET Core</span><span>NestJS</span><span>TypeORM</span><span>Postgres</span><span>Azure</span><span>AWS</span><span>ELK Stack</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="marker-dot"></div>
-                        <div class="marker-line"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Engineering Manager (Full Stack)</h3>
-                            <span class="company">BOLD</span>
-                            <span class="period">Apr 2021 - Jan 2023</span>
+                <!-- BOLD -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot" style="--dot-color:#f59e0b"></div>
+                    <div class="timeline-card">
+                        <div class="tl-header">
+                            <div class="tl-company-info">
+                                <div class="tl-company-badge" style="--badge-bg:#fffbeb;--badge-color:#f59e0b">BLD</div>
+                                <div>
+                                    <h3>Engineering Manager (Full Stack)</h3>
+                                    <div class="tl-meta">
+                                        <span class="tl-company">BOLD</span>
+                                        <span class="tl-period"><i class="fas fa-calendar"></i> Apr 2021 – Jan 2023</span>
+                                        <span class="tl-location"><i class="fas fa-map-marker-alt"></i> Noida</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <p class="company-desc">E-commerce & SaaS · Noida</p>
-                        <ul class="achievements">
-                            <li>Led design, architecture, and management of a 10+ member team overseeing five payment services — payments, payment risk management, subscription, offers, and notifications</li>
-                            <li>Drove .NET Core migration of the entire payments system, modernizing architecture and improving reliability</li>
-                            <li>Managed stakeholder interaction, translating business requirements into scalable technical architecture using Azure App Service, Azure Service Bus, and Azure Functions</li>
+                        <p class="tl-desc">E-commerce &amp; SaaS — led 10+ member team overseeing five payment services: payments, risk, subscription, offers &amp; notifications.</p>
+                        <ul class="tl-achievements">
+                            <li><i class="fas fa-check-circle"></i> Led design &amp; architecture of 5 payment services using .NET Core &amp; Azure Service Bus</li>
+                            <li><i class="fas fa-check-circle"></i> Drove .NET Core migration of entire BOLD payments system</li>
+                            <li><i class="fas fa-check-circle"></i> Managed stakeholder interaction, translating business needs into scalable architecture</li>
                         </ul>
-                        <div class="tech-stack">
-                            <span class="tech-tag">.NET Core</span>
-                            <span class="tech-tag">EF Core</span>
-                            <span class="tech-tag">SQL</span>
-                            <span class="tech-tag">Azure Service Bus</span>
-                            <span class="tech-tag">Azure Functions</span>
-                            <span class="tech-tag">Jenkins</span>
+                        <div class="tl-tags">
+                            <span>.NET Core</span><span>EF Core</span><span>SQL</span><span>Azure Service Bus</span><span>Azure Functions</span><span>Jenkins</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="marker-dot"></div>
-                        <div class="marker-line"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Senior Technical Lead (Full Stack)</h3>
-                            <span class="company">Stryker</span>
-                            <span class="period">Feb 2020 - Apr 2021</span>
+                <!-- Stryker -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot" style="--dot-color:#10b981"></div>
+                    <div class="timeline-card">
+                        <div class="tl-header">
+                            <div class="tl-company-info">
+                                <div class="tl-company-badge" style="--badge-bg:#ecfdf5;--badge-color:#10b981">STR</div>
+                                <div>
+                                    <h3>Senior Technical Lead (Full Stack)</h3>
+                                    <div class="tl-meta">
+                                        <span class="tl-company">Stryker</span>
+                                        <span class="tl-period"><i class="fas fa-calendar"></i> Feb 2020 – Apr 2021</span>
+                                        <span class="tl-location"><i class="fas fa-map-marker-alt"></i> Gurgaon</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <p class="company-desc">Healthcare Technology · Gurgaon</p>
-                        <ul class="achievements">
-                            <li>Designed and led a 5+ member team building multiple web applications on .NET Core with Azure Cosmos, Azure Triggers, and Azure Redis</li>
-                            <li>Built and shipped a COVID-19 risk assessment app (.NET Core + MVC + Azure SQL + Azure App Service)</li>
-                            <li>Developed a POC for knee implant surgery using Unity 3D and Blender; built CI/CD pipelines using Azure DevOps for enterprise Windchill environments</li>
+                        <p class="tl-desc">Healthcare Technology — led 5+ member team on .NET Core applications with Azure Cosmos, Azure Triggers &amp; Redis.</p>
+                        <ul class="tl-achievements">
+                            <li><i class="fas fa-check-circle"></i> Built COVID-19 risk assessment app on Azure (.NET Core + MVC + Azure SQL)</li>
+                            <li><i class="fas fa-check-circle"></i> Developed POC for knee implant surgery using Unity 3D &amp; Blender</li>
+                            <li><i class="fas fa-check-circle"></i> Built CI/CD pipelines using Azure DevOps for enterprise Windchill environments</li>
                         </ul>
-                        <div class="tech-stack">
-                            <span class="tech-tag">.NET Core</span>
-                            <span class="tech-tag">ReactJS</span>
-                            <span class="tech-tag">Azure Cosmos</span>
-                            <span class="tech-tag">Azure Redis</span>
-                            <span class="tech-tag">Unity 3D</span>
-                            <span class="tech-tag">Azure DevOps</span>
+                        <div class="tl-tags">
+                            <span>.NET Core</span><span>ReactJS</span><span>Azure Cosmos</span><span>Azure Redis</span><span>Unity 3D</span><span>Azure DevOps</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="marker-dot"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Lead Consultant</h3>
-                            <span class="company">Xebia</span>
-                            <span class="period">Jun 2017 - Feb 2020</span>
+                <!-- Xebia -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot" style="--dot-color:#ec4899"></div>
+                    <div class="timeline-card">
+                        <div class="tl-header">
+                            <div class="tl-company-info">
+                                <div class="tl-company-badge" style="--badge-bg:#fdf2f8;--badge-color:#ec4899">XEB</div>
+                                <div>
+                                    <h3>Lead Consultant</h3>
+                                    <div class="tl-meta">
+                                        <span class="tl-company">Xebia</span>
+                                        <span class="tl-period"><i class="fas fa-calendar"></i> Jun 2017 – Feb 2020</span>
+                                        <span class="tl-location"><i class="fas fa-map-marker-alt"></i> Gurgaon</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <p class="company-desc">Technology Consulting · Gurgaon</p>
-                        <ul class="achievements">
-                            <li>Led design, architecture, and management of a 5-person back-end team building microservices solutions for McKinsey & Company using .NET Core, React JS, Docker, and Kubernetes</li>
-                            <li>Organized several technology events and delivered multiple sessions on cutting edge technologies in India and abroad</li>
-                            <li>Awarded Microsoft Azure MVP (2018–2020) and C# Corner MVP (2018–2020) during this period</li>
+                        <p class="tl-desc">Technology Consulting — led microservices platform delivery for McKinsey &amp; Company. Awarded Microsoft Azure MVP &amp; C# Corner MVP during this period.</p>
+                        <ul class="tl-achievements">
+                            <li><i class="fas fa-check-circle"></i> Led 5-person back-end team on microservices solutions for McKinsey &amp; Company</li>
+                            <li><i class="fas fa-check-circle"></i> Delivered sessions at 20+ technology events in India and abroad</li>
+                            <li><i class="fas fa-check-circle"></i> Awarded Microsoft Azure MVP (2018–2020) &amp; C# Corner MVP (2018–2020)</li>
                         </ul>
-                        <div class="tech-stack">
-                            <span class="tech-tag">.NET Core</span>
-                            <span class="tech-tag">React JS</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">Kubernetes</span>
-                            <span class="tech-tag">Azure</span>
-                            <span class="tech-tag">Microservices</span>
+                        <div class="tl-tags">
+                            <span>.NET Core</span><span>React JS</span><span>Docker</span><span>Kubernetes</span><span>Azure</span><span>Microservices</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section id="skills" class="skills section section-alt">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Technical Skills</span>
+                <h2>Technology <span class="gradient-text">Stack</span></h2>
+                <p>Comprehensive expertise across modern technologies, platforms, and engineering practices</p>
+            </div>
+            <div class="skills-layout">
+                <!-- Skill Bars -->
+                <div class="skills-bars" data-aos="fade-right">
+                    <div class="skill-group">
+                        <h4><i class="fas fa-code"></i> Languages &amp; Frameworks</h4>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header"><span>.NET / .NET Core (C#)</span><span>95%</span></div>
+                            <div class="skill-track"><div class="skill-fill" data-width="95" style="--bar-color:#2563eb"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header"><span>Golang</span><span>85%</span></div>
+                            <div class="skill-track"><div class="skill-fill" data-width="85" style="--bar-color:#06b6d4"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header"><span>Node.js / NestJS / TypeScript</span><span>85%</span></div>
+                            <div class="skill-track"><div class="skill-fill" data-width="85" style="--bar-color:#8b5cf6"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header"><span>Python</span><span>80%</span></div>
+                            <div class="skill-track"><div class="skill-fill" data-width="80" style="--bar-color:#10b981"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header"><span>React / Angular</span><span>80%</span></div>
+                            <div class="skill-track"><div class="skill-fill" data-width="80" style="--bar-color:#f59e0b"></div></div>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h4><i class="fas fa-cloud"></i> Cloud &amp; DevOps</h4>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header"><span>Microsoft Azure</span><span>95%</span></div>
+                            <div class="skill-track"><div class="skill-fill" data-width="95" style="--bar-color:#2563eb"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header"><span>GCP</span><span>80%</span></div>
+                            <div class="skill-track"><div class="skill-fill" data-width="80" style="--bar-color:#06b6d4"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header"><span>Docker / Kubernetes</span><span>90%</span></div>
+                            <div class="skill-track"><div class="skill-fill" data-width="90" style="--bar-color:#8b5cf6"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header"><span>CI/CD (GitHub Actions / Azure DevOps)</span><span>90%</span></div>
+                            <div class="skill-track"><div class="skill-fill" data-width="90" style="--bar-color:#10b981"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tech Cloud -->
+                <div class="skills-cloud" data-aos="fade-left">
+                    <h4><i class="fas fa-layer-group"></i> Tech Cloud</h4>
+                    <div class="cloud-grid">
+                        <span class="cloud-tag size-xl">.NET Core</span>
+                        <span class="cloud-tag size-xl">Azure</span>
+                        <span class="cloud-tag size-lg">Golang</span>
+                        <span class="cloud-tag size-lg">Kafka</span>
+                        <span class="cloud-tag size-lg">PostgreSQL</span>
+                        <span class="cloud-tag size-md">GCP</span>
+                        <span class="cloud-tag size-md">NestJS</span>
+                        <span class="cloud-tag size-md">Docker</span>
+                        <span class="cloud-tag size-md">Kubernetes</span>
+                        <span class="cloud-tag size-md">Redis</span>
+                        <span class="cloud-tag size-md">TypeORM</span>
+                        <span class="cloud-tag size-sm">EF Core</span>
+                        <span class="cloud-tag size-sm">React</span>
+                        <span class="cloud-tag size-sm">AWS</span>
+                        <span class="cloud-tag size-sm">Python</span>
+                        <span class="cloud-tag size-sm">GitHub Actions</span>
+                        <span class="cloud-tag size-sm">Kibana</span>
+                        <span class="cloud-tag size-sm">ELK Stack</span>
+                        <span class="cloud-tag size-sm">Opsgenie</span>
+                        <span class="cloud-tag size-sm">LLM</span>
+                        <span class="cloud-tag size-sm">Azure ML</span>
+                        <span class="cloud-tag size-sm">Claude AI</span>
+                        <span class="cloud-tag size-sm">PCI-DSS</span>
+                        <span class="cloud-tag size-sm">Microservices</span>
+                    </div>
+
+                    <h4 style="margin-top:2rem"><i class="fas fa-certificate"></i> Certifications &amp; Awards</h4>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <i class="fab fa-microsoft"></i>
+                            <span>Microsoft Azure MVP (2×)</span>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-star"></i>
+                            <span>C# Corner MVP</span>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Microsoft Certified Trainer (MCT)</span>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Agentic AI Fundamentals</span>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-robot"></i>
+                            <span>Preparing Your Org for AI Agents</span>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-cog"></i>
+                            <span>Azure Machine Learning Development</span>
                         </div>
                     </div>
                 </div>
@@ -420,491 +629,314 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section id="projects" class="projects section">
         <div class="container">
-            <div class="section-header">
-                <h2>Technical Skills</h2>
-                <p>Comprehensive expertise across modern technologies and platforms</p>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fas fa-code"></i>
-                        <h3>Programming Languages & Frameworks</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <span class="skill-name">.NET / .NET Core (C#)</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Golang</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Node.js / NestJS / TypeScript</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Python</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">React / Angular</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fas fa-database"></i>
-                        <h3>Databases & Messaging</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <span class="skill-name">PostgreSQL</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">SQL Server</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Cosmos DB / Redis</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Kafka</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Entity Framework / TypeORM</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fas fa-cloud"></i>
-                        <h3>Cloud & DevOps</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <span class="skill-name">Microsoft Azure</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">GCP</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">AWS</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Docker / Kubernetes</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">CI/CD (GitHub Actions / Azure DevOps)</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fas fa-brain"></i>
-                        <h3>GenAI & LLM</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <span class="skill-name">LLM Integration (Claude / GPT)</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Azure ML</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Agentic AI Frameworks</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">GitHub Copilot / Cursor AI</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2>Featured Projects</h2>
-                <p>Showcasing innovative solutions and technical achievements</p>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Featured Work</span>
+                <h2>Key <span class="gradient-text">Projects</span></h2>
+                <p>Real-world platforms and systems delivering business impact at scale</p>
             </div>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop&auto=format&q=80" alt="Wallet 2.0 & iOL Pay">
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="50">
+                    <div class="project-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=500&h=280&fit=crop&auto=format&q=80" alt="Wallet 2.0 & iOL Pay" loading="lazy">
                         <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://www.iol.world" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
+                            <a href="https://www.iol.world" target="_blank" class="project-link-btn"><i class="fas fa-external-link-alt"></i> Visit</a>
                         </div>
+                        <div class="project-category">Fintech · iOL</div>
                     </div>
-                    <div class="project-content">
-                        <h3>Wallet 2.0 & iOL Pay</h3>
-                        <p>Multi-currency travel wallet and payment orchestration & supplier settlement platform at iOL, driving 50%+ of company revenue. Integrated Checkout.com, ConnexPay, WEX, Citi, ICCP & Trip Link at scale with full PCI-DSS certification.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">.NET Core</span>
-                            <span class="tech-tag">Golang</span>
-                            <span class="tech-tag">Azure</span>
-                            <span class="tech-tag">GCP</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">PCI-DSS</span>
+                    <div class="project-body">
+                        <h3>Wallet 2.0 &amp; iOL Pay</h3>
+                        <p>Multi-currency travel wallet and payment orchestration platform driving 50%+ of iOL's revenue. PCI-DSS certified with Checkout.com, ConnexPay, WEX &amp; Citi integrations.</p>
+                        <div class="project-tags">
+                            <span>.NET Core</span><span>Golang</span><span>Azure</span><span>GCP</span><span>PostgreSQL</span><span>PCI-DSS</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=250&fit=crop&auto=format&q=80" alt="Delhivery Payouts & PMT Platform">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=500&h=280&fit=crop&auto=format&q=80" alt="Delhivery PMT Platform" loading="lazy">
                         <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://www.delhivery.com" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
+                            <a href="https://www.delhivery.com" target="_blank" class="project-link-btn"><i class="fas fa-external-link-alt"></i> Visit</a>
                         </div>
+                        <div class="project-category">Logistics · Delhivery</div>
                     </div>
-                    <div class="project-content">
-                        <h3>Delhivery Payouts & PMT Platform</h3>
-                        <p>Logistics-critical Payouts, Slots, and Attendance platforms scaled by 40% in performance. Reduced CI/CD pipeline time by 45%, improved payout accuracy by 30%, and cut manual escalations by 50% with ACKO integration and slot templating.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">.NET Core</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">ReactJS</span>
-                            <span class="tech-tag">Azure</span>
-                            <span class="tech-tag">GitHub Actions</span>
+                    <div class="project-body">
+                        <h3>Delhivery Payouts &amp; PMT Platform</h3>
+                        <p>Logistics-critical Payouts, Slots &amp; Attendance platforms scaled +40% in performance. 45% faster CI/CD, 30% better payout accuracy, 99.98% uptime.</p>
+                        <div class="project-tags">
+                            <span>.NET Core</span><span>Python</span><span>ReactJS</span><span>Azure</span><span>GitHub Actions</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&auto=format&q=80" alt="Novo Banking Platform">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="project-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=500&h=280&fit=crop&auto=format&q=80" alt="Novo Banking Platform" loading="lazy">
                         <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://www.novo.co" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
+                            <a href="https://www.novo.co" target="_blank" class="project-link-btn"><i class="fas fa-external-link-alt"></i> Visit</a>
                         </div>
+                        <div class="project-category">Fintech · Novo</div>
                     </div>
-                    <div class="project-content">
+                    <div class="project-body">
                         <h3>Novo Banking Platform</h3>
-                        <p>Fintech platform powering 95% of Novo's $50M+ annual revenue across Cards, Lending/Loans, Payments, and Core Platform. Delivered ACH Push/Pull, MRDC, and Transferwise integrations with 99.9%+ uptime.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">.NET Core</span>
-                            <span class="tech-tag">NestJS</span>
-                            <span class="tech-tag">Postgres</span>
-                            <span class="tech-tag">AWS</span>
-                            <span class="tech-tag">ELK Stack</span>
+                        <p>Fintech platform powering 95% of Novo's $50M+ annual revenue. Cards, Lending, Payments &amp; Core Platform with ACH, MRDC &amp; Transferwise integrations.</p>
+                        <div class="project-tags">
+                            <span>.NET Core</span><span>NestJS</span><span>Postgres</span><span>AWS</span><span>ELK Stack</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop&auto=format&q=80" alt="COVID-19 Risk Assessment App">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=500&h=280&fit=crop&auto=format&q=80" alt="COVID-19 Risk App" loading="lazy">
                         <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
+                            <a href="#" class="project-link-btn"><i class="fas fa-info-circle"></i> Details</a>
                         </div>
+                        <div class="project-category">Healthcare · Stryker</div>
                     </div>
-                    <div class="project-content">
+                    <div class="project-body">
                         <h3>COVID-19 Risk Assessment App</h3>
-                        <p>Azure-hosted risk assessment application built at Stryker, along with a Unity 3D & Blender POC for knee implant surgery simulation — showcasing cross-domain technical range.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">.NET Core MVC</span>
-                            <span class="tech-tag">Azure SQL</span>
-                            <span class="tech-tag">EF Core</span>
-                            <span class="tech-tag">Unity 3D</span>
-                            <span class="tech-tag">Blender</span>
+                        <p>Azure-hosted risk assessment application built at Stryker, plus a Unity 3D &amp; Blender POC for knee implant surgery simulation.</p>
+                        <div class="project-tags">
+                            <span>.NET Core MVC</span><span>Azure SQL</span><span>Unity 3D</span><span>Blender</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop&auto=format&q=80" alt="Understanding Azure Book">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="project-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=280&fit=crop&auto=format&q=80" alt="Understanding Azure Book" loading="lazy">
                         <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://www.gourav8jain.wordpress.com" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
+                            <a href="https://www.gourav8jain.wordpress.com" target="_blank" class="project-link-btn"><i class="fas fa-book-open"></i> Read</a>
                         </div>
+                        <div class="project-category">Publication</div>
                     </div>
-                    <div class="project-content">
+                    <div class="project-body">
                         <h3>Understanding Azure: A Beginner's Guide</h3>
-                        <p>Published technical book on Microsoft Azure, alongside 150+ tech articles for Microsoft and open-source communities. Speaker at 30+ global tech events and Founder of Microsoft & Cloud Enthusiasts Meetup.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Azure</span>
-                            <span class="tech-tag">Technical Writing</span>
-                            <span class="tech-tag">Thought Leadership</span>
-                            <span class="tech-tag">Community</span>
+                        <p>Published book on Microsoft Azure, alongside 150+ tech articles and 30+ global speaking engagements. Founder of Microsoft &amp; Cloud Enthusiasts Meetup.</p>
+                        <div class="project-tags">
+                            <span>Azure</span><span>Technical Writing</span><span>Thought Leadership</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=250&fit=crop&auto=format&q=80" alt="McKinsey Microservices Platform">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&h=280&fit=crop&auto=format&q=80" alt="McKinsey Microservices" loading="lazy">
                         <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
+                            <a href="#" class="project-link-btn"><i class="fas fa-info-circle"></i> Details</a>
+                        </div>
+                        <div class="project-category">Consulting · Xebia</div>
+                    </div>
+                    <div class="project-body">
+                        <h3>McKinsey &amp; Company Microservices</h3>
+                        <p>Led design and delivery of a microservices-based web platform for McKinsey &amp; Company using .NET Core, React JS, Docker &amp; Kubernetes.</p>
+                        <div class="project-tags">
+                            <span>.NET Core</span><span>React JS</span><span>Docker</span><span>Kubernetes</span>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <h3>McKinsey & Company Microservices Platform</h3>
-                        <p>Led design and delivery of a microservices-based web platform for McKinsey & Company at Xebia — utilizing .NET Core, React JS, Docker, and Kubernetes for a resilient, scalable consulting solution.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">.NET Core</span>
-                            <span class="tech-tag">React JS</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">Kubernetes</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RESUME SECTION ===== -->
+    <section id="resume" class="resume-section section section-alt">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">My Resume</span>
+                <h2>View &amp; Download <span class="gradient-text">CV</span></h2>
+                <p>Get a full picture of my experience, skills, and achievements</p>
+            </div>
+            <div class="resume-wrapper" data-aos="fade-up">
+                <div class="resume-actions">
+                    <a href="Gourav_CV.pdf" download class="btn btn-primary btn-lg">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                    <a href="Gourav_CV.pdf" target="_blank" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-external-link-alt"></i> Open in New Tab
+                    </a>
+                </div>
+                <div class="resume-preview-container">
+                    <div class="resume-preview-header">
+                        <span><i class="fas fa-file-pdf"></i> Gourav_CV.pdf</span>
+                        <div class="resume-preview-controls">
+                            <a href="Gourav_CV.pdf" target="_blank" title="Open full screen"><i class="fas fa-expand"></i></a>
+                            <a href="Gourav_CV.pdf" download title="Download"><i class="fas fa-download"></i></a>
                         </div>
+                    </div>
+                    <iframe src="Gourav_CV.pdf" class="resume-iframe" title="Gourav Jain CV"></iframe>
+                    <div class="resume-fallback">
+                        <p><i class="fas fa-info-circle"></i> Can't see the preview? <a href="Gourav_CV.pdf" target="_blank">Open the CV directly</a> or <a href="Gourav_CV.pdf" download>download it</a>.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact" class="contact section">
         <div class="container">
-            <div class="section-header">
-                <h2>Get In Touch</h2>
-                <p>Let's discuss opportunities and collaborations</p>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Get In Touch</span>
+                <h2>Let's <span class="gradient-text">Connect</span></h2>
+                <p>Open to exciting opportunities, collaborations, and conversations about engineering leadership</p>
             </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
+            <div class="contact-grid">
+                <!-- Info -->
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
                             <h4>Email</h4>
-                            <p>gourav8jain@gmail.com</p>
+                            <a href="mailto:gourav8jain@gmail.com">gourav8jain@gmail.com</a>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
+                        <div>
                             <h4>Phone</h4>
-                            <p>+91-9953573400</p>
+                            <a href="tel:+919953573400">+91-9953573400</a>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-linkedin"></i>
-                        </div>
-                        <div class="contact-details">
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fab fa-linkedin-in"></i></div>
+                        <div>
                             <h4>LinkedIn</h4>
-                            <p>linkedin.com/in/gourav8jain</p>
+                            <a href="https://linkedin.com/in/gourav8jain" target="_blank">linkedin.com/in/gourav8jain</a>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
                             <h4>Location</h4>
-                            <p>New Delhi / Gurugram, India</p>
+                            <span>New Delhi / Gurugram, India</span>
                         </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-globe"></i></div>
+                        <div>
+                            <h4>Global Delivery</h4>
+                            <span>US · UK · UAE · Europe · Australia</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-socials">
+                        <a href="https://linkedin.com/in/gourav8jain" target="_blank" class="cs-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/gourav8jain" target="_blank" class="cs-link"><i class="fab fa-github"></i></a>
+                        <a href="https://www.gourav8jain.wordpress.com" target="_blank" class="cs-link"><i class="fas fa-blog"></i></a>
+                        <a href="https://www.credly.com/users/gourav8jain/badges" target="_blank" class="cs-link"><i class="fas fa-certificate"></i></a>
+                        <a href="mailto:gourav8jain@gmail.com" class="cs-link"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <h3>Get In Touch</h3>
-                    <p>Feel free to reach out for collaborations, opportunities, or just to say hello!</p>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <!-- Form -->
+                <div class="contact-form-wrap" data-aos="fade-left">
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name"><i class="fas fa-user"></i> Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
+                            <label for="subject"><i class="fas fa-tag"></i> Subject</label>
                             <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
                         </div>
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Tell me more about your inquiry..." rows="5" required></textarea>
+                            <label for="message"><i class="fas fa-comment-alt"></i> Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me more about your inquiry..." required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i>
-                            Send Message
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i> Send Message
                         </button>
+                        <p class="form-note">Or reach me directly at <a href="mailto:gourav8jain@gmail.com">gourav8jain@gmail.com</a></p>
                     </form>
-                    <div class="contact-fallback" style="margin-top: 1rem; text-align: center; font-size: 0.9rem; color: var(--text-light);">
-                        <p>Or send me an email directly: <a href="mailto:gourav8jain@gmail.com" style="color: var(--primary-color); text-decoration: none;">gourav8jain@gmail.com</a></p>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Gourav Jain</h3>
-                    <p>Global Engineering Leader | Microsoft Azure MVP · MCT</p>
-                    <p style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.8;">Sr. Engineering Manager & India Engineering Head @ iOL</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/gourav8jain" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/gourav8jain" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://www.gourav8jain.wordpress.com" target="_blank" title="Blog"><i class="fas fa-blog"></i></a>
-                        <a href="https://www.credly.com/users/gourav8jain/badges" target="_blank" title="Credly Badges"><i class="fas fa-certificate"></i></a>
-                        <a href="mailto:gourav8jain@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <span class="logo-gj">GJ</span>
+                            <span>Gourav Jain</span>
+                        </div>
+                        <p>Global Engineering Leader · Microsoft Azure MVP · MCT<br>Sr. Engineering Manager &amp; India Engineering Head @ iOL</p>
+                        <div class="footer-socials">
+                            <a href="https://linkedin.com/in/gourav8jain" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/gourav8jain" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.gourav8jain.wordpress.com" target="_blank"><i class="fas fa-blog"></i></a>
+                            <a href="https://www.credly.com/users/gourav8jain/badges" target="_blank"><i class="fas fa-certificate"></i></a>
+                            <a href="mailto:gourav8jain@gmail.com"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#competencies">Skills</a></li>
+                            <li><a href="#experience">Experience</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#resume">Resume</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Tech Stack</h4>
+                        <ul>
+                            <li><span>.NET Core · Golang</span></li>
+                            <li><span>Node.js · NestJS</span></li>
+                            <li><span>Azure · GCP · AWS</span></li>
+                            <li><span>Kafka · Kubernetes</span></li>
+                            <li><span>PostgreSQL · Redis</span></li>
+                            <li><span>GenAI · LLM · Azure ML</span></li>
+                        </ul>
+                    </div>
+                    <div class="footer-cta">
+                        <h4>Let's Work Together</h4>
+                        <p>Building something bold, global, and meaningful? Let's connect!</p>
+                        <a href="Gourav_CV.pdf" download class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                        <a href="#contact" class="btn btn-secondary" style="margin-top:0.75rem">
+                            <i class="fas fa-paper-plane"></i> Get In Touch
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Gourav Jain. All rights reserved.</p>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Gourav Jain. All rights reserved. Built with passion &amp; purpose.</p>
+                <p><a href="https://gourav8jain.github.io/portfolio/" target="_blank">gourav8jain.github.io/portfolio</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Performance optimized scripts -->
-    <script>
-        // Inline critical JavaScript for immediate functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            // Mobile menu functionality
-            const hamburger = document.querySelector('.hamburger');
-            const navMenu = document.querySelector('.nav-menu');
-            
-            if (hamburger && navMenu) {
-                hamburger.addEventListener('click', () => {
-                    hamburger.classList.toggle('active');
-                    navMenu.classList.toggle('active');
-                    document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
-                });
-            }
-            
-            // Smooth scrolling for navigation links
-            const links = document.querySelectorAll('a[href^="#"]');
-            links.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetSection = document.querySelector(targetId);
-                    
-                    if (targetSection) {
-                        const offsetTop = targetSection.offsetTop - 80;
-                        window.scrollTo({
-                            top: offsetTop,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
-    
-    <!-- Deferred non-critical scripts -->
-    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script> -->
+    <!-- Notification -->
+    <div id="notification" class="notification" role="alert"></div>
+
     <script src="script.js" defer></script>
-    
-    <!-- Performance monitoring -->
-    <script>
-        // Performance monitoring
-        window.addEventListener('load', function() {
-            // Report Core Web Vitals
-            if ('performance' in window) {
-                const observer = new PerformanceObserver((list) => {
-                    for (const entry of list.getEntries()) {
-                        if (entry.entryType === 'largest-contentful-paint') {
-                            console.log('LCP:', entry.startTime);
-                        }
-                        if (entry.entryType === 'first-input') {
-                            console.log('FID:', entry.processingStart - entry.startTime);
-                        }
-                        if (entry.entryType === 'layout-shift') {
-                            console.log('CLS:', entry.value);
-                        }
-                    }
-                });
-                observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-            }
-        });
-    </script>
 </body>
-</html> 
+</html>
