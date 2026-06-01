@@ -90,12 +90,12 @@ function initSmoothScroll() {
 
 // ---- Typing Effect ----
 const PHRASES = [
-    'Global Engineering Leader',
+    'Technology & Engineering Leader',
+    'Platform Strategy Expert',
+    'AI-Native Transformation Leader',
     'Microsoft Azure MVP',
-    'GenAI Evangelist',
-    'Fintech & Payments Expert',
-    'Distributed Systems Architect',
-    'Engineering Team Builder',
+    'Cloud Architect',
+    'Engineering Org Builder',
 ];
 
 function initTyping() {
