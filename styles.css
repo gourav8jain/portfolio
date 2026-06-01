@@ -757,6 +757,53 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     border: 1px solid var(--border);
 }
 
+/* Leadership — 3 pillars */
+.leadership-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Technical skills category grid */
+.tech-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 0;
+}
+.tech-skill-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem 1.35rem;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+.tech-skill-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(37, 99, 235, .2);
+}
+.tech-skill-card-wide {
+    grid-column: span 2;
+}
+.tech-skill-card h4 {
+    font-size: .88rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+.tech-skill-card h4 i {
+    color: var(--primary);
+    font-size: .95rem;
+}
+.section-alt .tech-skill-card {
+    background: var(--white);
+}
+
 /* ============================================================
    EXPERIENCE / TIMELINE
    ============================================================ */
@@ -1455,6 +1502,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     .about-grid          { grid-template-columns: 1fr; }
     .stats-grid          { grid-template-columns: repeat(3,1fr); }
     .competencies-grid   { grid-template-columns: repeat(2,1fr); }
+    .leadership-grid     { grid-template-columns: 1fr; }
+    .tech-skills-grid    { grid-template-columns: repeat(2, 1fr); }
+    .tech-skill-card-wide { grid-column: span 2; }
     .projects-grid       { grid-template-columns: repeat(2,1fr); }
     .skills-layout       { grid-template-columns: 1fr; }
     .contact-grid        { grid-template-columns: 1fr; }
@@ -1508,8 +1558,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     /* About */
     .stats-grid { grid-template-columns: repeat(2,1fr); }
 
-    /* Competencies */
+    /* Competencies & technical skills */
     .competencies-grid { grid-template-columns: 1fr; }
+    .leadership-grid   { grid-template-columns: 1fr; }
+    .tech-skills-grid  { grid-template-columns: 1fr; }
+    .tech-skill-card-wide { grid-column: span 1; }
 
     /* Timeline */
     .timeline { padding-left: 1.5rem; }
